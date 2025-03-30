@@ -1,0 +1,98 @@
+{
+ "actions": [],
+ "creation": "2025-01-28 06:52:38.202618",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item",
+  "column_break_r5uh",
+  "item_name",
+  "column_break_idmi",
+  "budget_amount",
+  "column_break_7n48",
+  "item_group",
+  "cost_detail_section",
+  "cost_price",
+  "column_break_c7dz",
+  "budget_qty"
+ ],
+ "fields": [
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item",
+   "options": "Item",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_r5uh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "item.item_name",
+   "fetch_if_empty": 1,
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Item Name"
+  },
+  {
+   "fieldname": "column_break_idmi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "budget_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Budget Amount",
+   "options": "Company:company:default_currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_7n48",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "item.item_group",
+   "fieldname": "item_group",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Item Group"
+  },
+  {
+   "fieldname": "cost_detail_section",
+   "fieldtype": "Section Break",
+   "label": "Cost Detail"
+  },
+  {
+   "fieldname": "cost_price",
+   "fieldtype": "Currency",
+   "label": "Cost Price"
+  },
+  {
+   "fieldname": "column_break_c7dz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "budget_qty",
+   "fieldtype": "Float",
+   "label": "Budget Qty"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2025-03-22 15:41:45.907562",
+ "modified_by": "Administrator",
+ "module": "Estate Management",
+ "name": "Budget Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

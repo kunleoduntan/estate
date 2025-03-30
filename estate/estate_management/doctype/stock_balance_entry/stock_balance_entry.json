@@ -1,0 +1,197 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-03-10 09:03:08.210525",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "stock_information_section",
+  "item_code",
+  "column_break_b0n0",
+  "item_name",
+  "column_break_9l0s",
+  "item_group",
+  "column_break_8s8h",
+  "warehouse",
+  "qty_and_reordering_information_section",
+  "qty",
+  "safety_stock",
+  "column_break_weoc",
+  "reorder_level",
+  "reorder_qty",
+  "column_break_ruqz",
+  "minimum_order_qty",
+  "item_costing_section",
+  "cost_price",
+  "ref",
+  "column_break_yfqd",
+  "uom",
+  "report_date",
+  "column_break_fvpx",
+  "amount",
+  "reorder_amount",
+  "column_break_gsql",
+  "title"
+ ],
+ "fields": [
+  {
+   "fieldname": "stock_information_section",
+   "fieldtype": "Section Break",
+   "label": "Stock information"
+  },
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item",
+   "options": "Item"
+  },
+  {
+   "fieldname": "column_break_b0n0",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "item_code.item_name",
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Item Name"
+  },
+  {
+   "fieldname": "column_break_9l0s",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "item_code.item_group",
+   "fieldname": "item_group",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Item Group"
+  },
+  {
+   "fieldname": "column_break_8s8h",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "warehouse",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "qty_and_reordering_information_section",
+   "fieldtype": "Section Break",
+   "label": "Qty and Reordering Information"
+  },
+  {
+   "fieldname": "qty",
+   "fieldtype": "Float",
+   "label": "Qty"
+  },
+  {
+   "fetch_from": "item_code.safety_stock",
+   "fieldname": "safety_stock",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Safety Stock"
+  },
+  {
+   "fieldname": "column_break_weoc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reorder_level",
+   "fieldtype": "Float",
+   "label": "Reorder Level"
+  },
+  {
+   "fieldname": "reorder_qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Reorder Qty"
+  },
+  {
+   "fieldname": "column_break_ruqz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "item_code.min_order_qty",
+   "fieldname": "minimum_order_qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Min Order Qty"
+  },
+  {
+   "fieldname": "item_costing_section",
+   "fieldtype": "Section Break",
+   "label": "Item Costing"
+  },
+  {
+   "fieldname": "cost_price",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Cost Price"
+  },
+  {
+   "fieldname": "ref",
+   "fieldtype": "Data",
+   "label": "Ref"
+  },
+  {
+   "fieldname": "column_break_yfqd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "item_code.stock_uom",
+   "fieldname": "uom",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "UOM"
+  },
+  {
+   "fieldname": "report_date",
+   "fieldtype": "Date",
+   "label": "Report Date"
+  },
+  {
+   "fieldname": "column_break_fvpx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount"
+  },
+  {
+   "fieldname": "reorder_amount",
+   "fieldtype": "Currency",
+   "label": "Reorder Amount"
+  },
+  {
+   "fieldname": "column_break_gsql",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Title"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-03-22 15:41:41.925556",
+ "modified_by": "Administrator",
+ "module": "Estate Management",
+ "name": "Stock Balance Entry",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

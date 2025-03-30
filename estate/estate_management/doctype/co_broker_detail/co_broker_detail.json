@@ -1,0 +1,351 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-03-22 08:45:22.288534",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "broker_id",
+  "column_break_rgtto",
+  "broker_name",
+  "column_break_66nkt",
+  "debit_account",
+  "column_break_krbqq",
+  "note",
+  "section_break_i7p0y",
+  "gross_commission",
+  "column_break_19yov",
+  "commission_due",
+  "column_break_k0pen",
+  "vat_amount",
+  "column_break_lpulx",
+  "admin_fee",
+  "column_break_gdvj2",
+  "net_due",
+  "rate_section",
+  "currency",
+  "column_break_1qur5",
+  "exch_rate",
+  "column_break_mw8bi",
+  "proportion",
+  "column_break_ugpai",
+  "vat_rate",
+  "column_break_w0szo",
+  "admin_fee_rate",
+  "column_break_yr8or",
+  "tenancy_detail_section",
+  "gross_rent",
+  "commission",
+  "rate",
+  "column_break_c2mbj",
+  "start_date",
+  "end_date",
+  "tenure",
+  "column_break_nfusq",
+  "tenant",
+  "client_name",
+  "column_break_ujhdp",
+  "property_description",
+  "due_to",
+  "foreign_currency_section_section",
+  "gross_commission_in_fc",
+  "column_break_ow185",
+  "commission_due_in_fc",
+  "column_break_pt6v8",
+  "vat_amount_in_fc",
+  "column_break_wvbyl",
+  "admin_fee_in_fc",
+  "column_break_l86z9",
+  "net_due_in_fc"
+ ],
+ "fields": [
+  {
+   "fieldname": "broker_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Broker ID",
+   "options": "Supplier"
+  },
+  {
+   "fieldname": "column_break_rgtto",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_i7p0y",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "gross_commission",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Gross Commission"
+  },
+  {
+   "fieldname": "column_break_19yov",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "commission_due",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Commission Due"
+  },
+  {
+   "fieldname": "column_break_k0pen",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "vat_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "VAT Amount"
+  },
+  {
+   "fieldname": "column_break_lpulx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "admin_fee",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Admin Fee"
+  },
+  {
+   "fieldname": "column_break_gdvj2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "net_due",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Net Due"
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Small Text",
+   "label": "Note",
+   "max_height": "105px"
+  },
+  {
+   "fieldname": "debit_account",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Debit Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "rate_section",
+   "fieldtype": "Section Break",
+   "label": "Rate"
+  },
+  {
+   "fieldname": "proportion",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Proportion %"
+  },
+  {
+   "fieldname": "column_break_ugpai",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "vat_rate",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "VAT Rate"
+  },
+  {
+   "fieldname": "column_break_w0szo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "admin_fee_rate",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Admin Fee Rate"
+  },
+  {
+   "fieldname": "column_break_yr8or",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "gross_rent",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Gross Rent"
+  },
+  {
+   "fieldname": "commission",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Commission"
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Rate"
+  },
+  {
+   "fieldname": "column_break_c2mbj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "End Date"
+  },
+  {
+   "fieldname": "tenure",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Tenure"
+  },
+  {
+   "fieldname": "column_break_nfusq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tenant",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Tenant"
+  },
+  {
+   "fieldname": "client_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Client Name"
+  },
+  {
+   "fieldname": "column_break_ujhdp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "property_description",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Property Description",
+   "max_height": "105px"
+  },
+  {
+   "fieldname": "due_to",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "% Due To"
+  },
+  {
+   "fieldname": "foreign_currency_section_section",
+   "fieldtype": "Section Break",
+   "label": "Foreign Currency Section"
+  },
+  {
+   "fieldname": "gross_commission_in_fc",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Gross Commission In Fc"
+  },
+  {
+   "fieldname": "column_break_ow185",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "commission_due_in_fc",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Commission Due In fc"
+  },
+  {
+   "fieldname": "column_break_pt6v8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "vat_amount_in_fc",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "VAT Amount In Fc"
+  },
+  {
+   "fieldname": "column_break_wvbyl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "admin_fee_in_fc",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Admin Fee In FC"
+  },
+  {
+   "fieldname": "net_due_in_fc",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Net Due In FC"
+  },
+  {
+   "fieldname": "exch_rate",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Exch Rate"
+  },
+  {
+   "fieldname": "column_break_1qur5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fetch_from": "broker_id.supplier_name",
+   "fieldname": "broker_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Broker Name"
+  },
+  {
+   "fieldname": "column_break_66nkt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_krbqq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_l86z9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_mw8bi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tenancy_detail_section",
+   "fieldtype": "Section Break",
+   "label": "Tenancy Detail"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-03-22 09:18:07.128783",
+ "modified_by": "Administrator",
+ "module": "Estate Management",
+ "name": "Co Broker Detail",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

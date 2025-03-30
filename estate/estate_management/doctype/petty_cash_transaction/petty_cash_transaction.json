@@ -1,0 +1,146 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-02-04 05:04:00.248255",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "beneficiary",
+  "column_break_xww6",
+  "account",
+  "column_break_g2y9",
+  "transaction_description",
+  "section_break_wg37",
+  "outflow",
+  "column_break_hktd",
+  "exch_rate",
+  "column_break_sqsd",
+  "inflow",
+  "column_break_x1ml",
+  "balance",
+  "accounting_and_dimension_section",
+  "cost_center",
+  "column_break_ioua",
+  "project",
+  "title"
+ ],
+ "fields": [
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Date"
+  },
+  {
+   "fieldname": "beneficiary",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Beneficiary"
+  },
+  {
+   "fieldname": "column_break_xww6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "account",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "column_break_g2y9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "transaction_description",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Transaction Description"
+  },
+  {
+   "fieldname": "section_break_wg37",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "outflow",
+   "fieldtype": "Currency",
+   "label": "Outflow"
+  },
+  {
+   "fieldname": "column_break_hktd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "exch_rate",
+   "fieldtype": "Currency",
+   "label": "Exch Rate"
+  },
+  {
+   "fieldname": "column_break_sqsd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "inflow",
+   "fieldtype": "Currency",
+   "label": "Inflow"
+  },
+  {
+   "fieldname": "column_break_x1ml",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "balance",
+   "fieldtype": "Currency",
+   "label": "Balance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "accounting_and_dimension_section",
+   "fieldtype": "Section Break",
+   "label": "Accounting and Dimension"
+  },
+  {
+   "fieldname": "cost_center",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Cost Center",
+   "options": "Cost Center"
+  },
+  {
+   "fieldname": "column_break_ioua",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Title"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-03-22 16:02:37.906228",
+ "modified_by": "Administrator",
+ "module": "Estate Management",
+ "name": "Petty Cash Transaction",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,483 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-10-11 08:30:58.180307",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "column_break_2",
+  "posting_date",
+  "column_break_3",
+  "pay_month",
+  "column_break_4",
+  "transaction_description",
+  "create_entry",
+  "gross_pay_information_section",
+  "gross_pay",
+  "column_break_5",
+  "bonuses",
+  "column_break_6",
+  "other_earnings",
+  "column_break_7",
+  "total_gross",
+  "providence_funds_employer_contribution_section",
+  "pension",
+  "column_break_9",
+  "nsitf",
+  "column_break_21",
+  "itf",
+  "column_break_23",
+  "hmo",
+  "column_break_25",
+  "others",
+  "column_break_27",
+  "total_providence",
+  "deductions_section",
+  "tax",
+  "column_break_30",
+  "pension_employee",
+  "column_break_32",
+  "loan",
+  "column_break_34",
+  "salary_advance",
+  "column_break_36",
+  "penal_charges",
+  "column_break_38",
+  "absentieesm",
+  "total_section",
+  "total_deductions",
+  "column_break_43",
+  "net_salary",
+  "accounts_tab",
+  "earnings_accounts_section",
+  "gross_pay_account",
+  "column_break_48",
+  "bonus_account",
+  "column_break_50",
+  "other_earnings_account",
+  "providence_fund_accounts_section",
+  "pension_employer_contribution_account",
+  "column_break_54",
+  "nsift_account",
+  "column_break_56",
+  "itf_account",
+  "column_break_58",
+  "hmo_account",
+  "others_account",
+  "deduction_account_section",
+  "salary_payable_account",
+  "column_break_64",
+  "tax_account",
+  "column_break_66",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pay_month",
+   "fieldtype": "Data",
+   "label": "Pay Month"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "transaction_description",
+   "fieldtype": "Small Text",
+   "label": "Transaction Description"
+  },
+  {
+   "default": "0",
+   "fieldname": "create_entry",
+   "fieldtype": "Check",
+   "label": "Create Entry"
+  },
+  {
+   "fieldname": "gross_pay_information_section",
+   "fieldtype": "Section Break",
+   "label": "Gross Pay Information"
+  },
+  {
+   "default": "0.00",
+   "fieldname": "gross_pay",
+   "fieldtype": "Currency",
+   "label": "Gross Pay"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0.00",
+   "fieldname": "bonuses",
+   "fieldtype": "Currency",
+   "label": "Bonuses"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0.00",
+   "fieldname": "other_earnings",
+   "fieldtype": "Currency",
+   "label": "Other Earnings"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0.00",
+   "fieldname": "total_gross",
+   "fieldtype": "Currency",
+   "label": "Total Gross"
+  },
+  {
+   "fieldname": "providence_funds_employer_contribution_section",
+   "fieldtype": "Section Break",
+   "label": "Providence Funds Employer Contribution"
+  },
+  {
+   "default": "0.00",
+   "fieldname": "pension",
+   "fieldtype": "Currency",
+   "label": "Pension"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0.00",
+   "fieldname": "nsitf",
+   "fieldtype": "Currency",
+   "label": "NSITF"
+  },
+  {
+   "fieldname": "column_break_21",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0.00",
+   "fieldname": "itf",
+   "fieldtype": "Currency",
+   "label": "ITF"
+  },
+  {
+   "fieldname": "column_break_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0.00",
+   "fieldname": "hmo",
+   "fieldtype": "Currency",
+   "label": "HMO"
+  },
+  {
+   "fieldname": "column_break_25",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0.00",
+   "fieldname": "others",
+   "fieldtype": "Currency",
+   "label": "Others"
+  },
+  {
+   "fieldname": "column_break_27",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "total_providence",
+   "fieldtype": "Currency",
+   "label": "Total Providence"
+  },
+  {
+   "fieldname": "deductions_section",
+   "fieldtype": "Section Break",
+   "label": "Deductions"
+  },
+  {
+   "default": "0.00",
+   "fieldname": "tax",
+   "fieldtype": "Currency",
+   "label": "Tax"
+  },
+  {
+   "fieldname": "column_break_30",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pension_employee",
+   "fieldtype": "Currency",
+   "label": "Pension EE"
+  },
+  {
+   "fieldname": "column_break_32",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "loan",
+   "fieldtype": "Currency",
+   "label": "Loan"
+  },
+  {
+   "fieldname": "column_break_34",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "salary_advance",
+   "fieldtype": "Currency",
+   "label": "Salary Adv"
+  },
+  {
+   "fieldname": "column_break_36",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "penal_charges",
+   "fieldtype": "Currency",
+   "label": "Penal Charges"
+  },
+  {
+   "fieldname": "column_break_38",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "absentieesm",
+   "fieldtype": "Currency",
+   "label": "Absenteeism"
+  },
+  {
+   "fieldname": "total_section",
+   "fieldtype": "Section Break",
+   "label": "Total"
+  },
+  {
+   "fieldname": "total_deductions",
+   "fieldtype": "Currency",
+   "label": "Total Deductions",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_43",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "net_salary",
+   "fieldtype": "Currency",
+   "label": "Net Salary"
+  },
+  {
+   "fieldname": "accounts_tab",
+   "fieldtype": "Tab Break",
+   "label": "Accounts"
+  },
+  {
+   "fieldname": "earnings_accounts_section",
+   "fieldtype": "Section Break",
+   "label": "Earnings Accounts"
+  },
+  {
+   "default": "8701 - Salaries & wages Expenses - SN",
+   "fieldname": "gross_pay_account",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Gross Pay Account",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_48",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "8707 - Bonus expenses - SN",
+   "fieldname": "bonus_account",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Bonus Account",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_50",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "8701 - Salaries & wages Expenses - SN",
+   "fieldname": "other_earnings_account",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Other Earnings Account",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "providence_fund_accounts_section",
+   "fieldtype": "Section Break",
+   "label": "Providence Fund Accounts"
+  },
+  {
+   "default": "8706 - Pension employer contribution - SN",
+   "fieldname": "pension_employer_contribution_account",
+   "fieldtype": "Link",
+   "label": "Pension Employer Contribution Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "column_break_54",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "8713 - NSITF Contribution - SN",
+   "fieldname": "nsift_account",
+   "fieldtype": "Link",
+   "label": "NSIFT Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "column_break_56",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "itf_account",
+   "fieldtype": "Link",
+   "label": "ITF Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "column_break_58",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "8708 - Medical allowance (HMO) - SN",
+   "fieldname": "hmo_account",
+   "fieldtype": "Link",
+   "label": "HMO Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "others_account",
+   "fieldtype": "Link",
+   "label": "Others Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "deduction_account_section",
+   "fieldtype": "Section Break",
+   "label": "Deduction Account"
+  },
+  {
+   "default": "4504 - Salary Payable - SN",
+   "fieldname": "salary_payable_account",
+   "fieldtype": "Link",
+   "label": "Salary Payable Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "column_break_64",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "4024 - Pay-As-You-Earn (PAYE) - SN",
+   "fieldname": "tax_account",
+   "fieldtype": "Link",
+   "label": "Tax Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "column_break_66",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Payroll Journal",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-03-22 15:42:19.884141",
+ "modified_by": "Administrator",
+ "module": "Estate Management",
+ "name": "Payroll Journal",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts User",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,113 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-03-22 09:25:59.267912",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "transaction_type",
+  "line_charge",
+  "effect",
+  "column_break_uvsuy",
+  "account",
+  "rate",
+  "column_break_shoh9",
+  "amount",
+  "broker",
+  "deferral_section",
+  "start_date",
+  "column_break_mctwa",
+  "end_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "transaction_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Transaction Type",
+   "options": "\nGross Rent\nDeferred Commission\nDue To Other Brokers\nAdmin Fee\nVAT\nNet Rent"
+  },
+  {
+   "fieldname": "line_charge",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Line Charge",
+   "options": "\nActual\nGross Rent\nDeferred Commission"
+  },
+  {
+   "fieldname": "effect",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Effect (DR/CR)",
+   "options": "\nDebit\nCredit"
+  },
+  {
+   "fieldname": "column_break_uvsuy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "account",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Rate"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount"
+  },
+  {
+   "fieldname": "broker",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Broker",
+   "options": "Supplier"
+  },
+  {
+   "fieldname": "deferral_section",
+   "fieldtype": "Section Break",
+   "label": "Deferral"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "column_break_mctwa",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "End Date"
+  },
+  {
+   "fieldname": "column_break_shoh9",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-03-29 14:06:26.362702",
+ "modified_by": "Administrator",
+ "module": "Estate Management",
+ "name": "Accounting for Property",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,148 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-03-22 09:38:04.567958",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "trans_date",
+  "type",
+  "column_break_nhyf3",
+  "debit_account",
+  "credit_account",
+  "column_break_owylz",
+  "amount",
+  "journal_entry",
+  "column_break_xkrdd",
+  "charged_to_is",
+  "commission_sharing_basis_section",
+  "due_to_other_brokers",
+  "column_break_dmbyi",
+  "due_to_lead_broker",
+  "column_break_tut8s",
+  "amount_due_to_lead_broker",
+  "column_break_3waez",
+  "amount_due_to_other_brokers",
+  "admin_fee"
+ ],
+ "fields": [
+  {
+   "fieldname": "type",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Type"
+  },
+  {
+   "fieldname": "credit_account",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Credit Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "column_break_owylz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount"
+  },
+  {
+   "fieldname": "journal_entry",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Journal Entry",
+   "options": "Journal Entry"
+  },
+  {
+   "fieldname": "debit_account",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Debit Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "charged_to_is",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Charged to IS",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "commission_sharing_basis_section",
+   "fieldtype": "Section Break",
+   "label": "Commission Sharing Basis"
+  },
+  {
+   "fieldname": "due_to_other_brokers",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "% Due to Other Brokers"
+  },
+  {
+   "fieldname": "due_to_lead_broker",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "% Due To Lead Broker"
+  },
+  {
+   "fieldname": "column_break_tut8s",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amount_due_to_lead_broker",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount Due to Lead Broker"
+  },
+  {
+   "fieldname": "amount_due_to_other_brokers",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount Due to Other Brokers"
+  },
+  {
+   "fieldname": "trans_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Trans Date"
+  },
+  {
+   "fieldname": "column_break_nhyf3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_xkrdd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_dmbyi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_3waez",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "admin_fee",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Admin Fee"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-03-29 15:27:33.555226",
+ "modified_by": "Administrator",
+ "module": "Estate Management",
+ "name": "Accounting Entries",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

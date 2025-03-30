@@ -1,0 +1,423 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-11-30 20:33:33.841792",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "referenced_invoice",
+  "column_break_wuct",
+  "title",
+  "column_break_wntw",
+  "company",
+  "section_break_g8kh",
+  "customer_id",
+  "customer_name",
+  "posting_date",
+  "column_break_hbjo",
+  "start_date",
+  "total_value",
+  "percentage",
+  "column_break_arlw",
+  "project_name",
+  "stage_of_recognition",
+  "column_break_ux1m",
+  "description",
+  "invoice_item_section",
+  "revenue_item",
+  "total_section",
+  "column_break_ozsv",
+  "revenue",
+  "column_break_mcss",
+  "cost_of_materials",
+  "column_break_ecst",
+  "overhead_total",
+  "column_break_ug0r",
+  "profit",
+  "column_break_rxpe",
+  "create_entries",
+  "amortize",
+  "materials_section",
+  "stock_item",
+  "expenses_section",
+  "paid_expenses",
+  "amortization_settings_section",
+  "end_date",
+  "column_break_8p64",
+  "frequency",
+  "column_break_idzy",
+  "charged_revenue",
+  "column_break_u0ws",
+  "charged_cost",
+  "column_break_6qzx",
+  "charged_expense",
+  "column_break_fe10",
+  "no_of_days",
+  "analysis_tab",
+  "section_break_tzrz",
+  "schedule_of_amortization_rc",
+  "accounts_tab",
+  "deferred_revenue_account",
+  "column_break_rapu",
+  "revenue_account",
+  "column_break_mr7v",
+  "deferred_expense_account",
+  "column_break_5ltq",
+  "direct_cost_account",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "referenced_invoice",
+   "fieldtype": "Link",
+   "label": "Referenced Invoice",
+   "options": "Sales Invoice"
+  },
+  {
+   "fieldname": "column_break_wuct",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title"
+  },
+  {
+   "fieldname": "column_break_wntw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_g8kh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "referenced_invoice.customer",
+   "fieldname": "customer_id",
+   "fieldtype": "Data",
+   "label": "Customer ID"
+  },
+  {
+   "fetch_from": "referenced_invoice.customer_name",
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name"
+  },
+  {
+   "fetch_from": "referenced_invoice.posting_date",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date"
+  },
+  {
+   "fieldname": "column_break_hbjo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fetch_from": "referenced_invoice.base_total",
+   "fieldname": "total_value",
+   "fieldtype": "Currency",
+   "label": "Total Value"
+  },
+  {
+   "fieldname": "percentage",
+   "fieldtype": "Percent",
+   "label": "Percentage",
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_arlw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "project_name",
+   "fieldtype": "Link",
+   "label": "Project Name",
+   "options": "Project"
+  },
+  {
+   "fieldname": "stage_of_recognition",
+   "fieldtype": "Select",
+   "label": "Stage of Recognition",
+   "options": "First\nSecond\nThird\nFourth",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_ux1m",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description "
+  },
+  {
+   "fieldname": "invoice_item_section",
+   "fieldtype": "Section Break",
+   "label": "Invoice Item"
+  },
+  {
+   "fieldname": "revenue_item",
+   "fieldtype": "Table",
+   "label": "Revenue Item",
+   "options": "Revenue Item"
+  },
+  {
+   "fieldname": "total_section",
+   "fieldtype": "Section Break",
+   "label": "Total"
+  },
+  {
+   "fieldname": "column_break_ozsv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "revenue",
+   "fieldtype": "Currency",
+   "label": "Revenue"
+  },
+  {
+   "fieldname": "column_break_mcss",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cost_of_materials",
+   "fieldtype": "Currency",
+   "label": "Cost of Materials"
+  },
+  {
+   "fieldname": "column_break_ecst",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "overhead_total",
+   "fieldtype": "Currency",
+   "label": "Overhead Total"
+  },
+  {
+   "fieldname": "column_break_ug0r",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "profit",
+   "fieldtype": "Currency",
+   "label": "Profit"
+  },
+  {
+   "fieldname": "column_break_rxpe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "create_entries",
+   "fieldtype": "Check",
+   "label": "Create Entries"
+  },
+  {
+   "default": "0",
+   "fieldname": "amortize",
+   "fieldtype": "Check",
+   "label": "Amortize"
+  },
+  {
+   "fieldname": "materials_section",
+   "fieldtype": "Section Break",
+   "label": "Materials"
+  },
+  {
+   "fieldname": "stock_item",
+   "fieldtype": "Table",
+   "label": "Stock Item",
+   "options": "Stock Item"
+  },
+  {
+   "fieldname": "expenses_section",
+   "fieldtype": "Section Break",
+   "label": "Expenses"
+  },
+  {
+   "fieldname": "paid_expenses",
+   "fieldtype": "Table",
+   "ignore_user_permissions": 1,
+   "label": "Paid Expenses",
+   "options": "Direct Expenses"
+  },
+  {
+   "fieldname": "amortization_settings_section",
+   "fieldtype": "Section Break",
+   "label": "Amortization Settings"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date",
+   "mandatory_depends_on": "amortize"
+  },
+  {
+   "fieldname": "column_break_8p64",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "frequency",
+   "fieldtype": "Select",
+   "label": "Frequency",
+   "options": "\nMonthly\nQuarterly"
+  },
+  {
+   "fieldname": "column_break_idzy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "charged_revenue",
+   "fieldtype": "Currency",
+   "label": "Charged Revenue"
+  },
+  {
+   "fieldname": "column_break_u0ws",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "charged_cost",
+   "fieldtype": "Currency",
+   "label": "Charged Cost"
+  },
+  {
+   "fieldname": "column_break_6qzx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "charged_expense",
+   "fieldtype": "Currency",
+   "label": "Charged Expense"
+  },
+  {
+   "fieldname": "column_break_fe10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "no_of_days",
+   "fieldtype": "Data",
+   "label": "No of Days"
+  },
+  {
+   "fieldname": "analysis_tab",
+   "fieldtype": "Tab Break",
+   "label": "Analysis"
+  },
+  {
+   "fieldname": "section_break_tzrz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "schedule_of_amortization_rc",
+   "fieldtype": "Table",
+   "label": "Schedule of Amortization",
+   "options": "Schedule of Amortization Rc"
+  },
+  {
+   "fieldname": "accounts_tab",
+   "fieldtype": "Tab Break",
+   "label": "Accounts"
+  },
+  {
+   "fieldname": "deferred_revenue_account",
+   "fieldtype": "Link",
+   "label": "Deferred Revenue Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "column_break_rapu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "revenue_account",
+   "fieldtype": "Link",
+   "label": "Revenue Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "column_break_mr7v",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "deferred_expense_account",
+   "fieldtype": "Link",
+   "label": "Deferred Expense Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "column_break_5ltq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "direct_cost_account",
+   "fieldtype": "Link",
+   "label": "Direct Cost Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Revenue Recognition",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-03-22 15:42:05.803365",
+ "modified_by": "Administrator",
+ "module": "Estate Management",
+ "name": "Revenue Recognition",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

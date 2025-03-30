@@ -1,0 +1,72 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-03-29 19:21:29.019178",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "charge_type",
+  "column_break_m2dvx",
+  "mode",
+  "column_break_zc6do",
+  "payment_status",
+  "column_break_vnsrx",
+  "amount"
+ ],
+ "fields": [
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "charge_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Charge Type",
+   "options": "Property Fee Type"
+  },
+  {
+   "fieldname": "column_break_m2dvx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mode",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Mode",
+   "options": "\nWeekly\nMonthly\nQuarterly\nBi-annual\nAnnual"
+  },
+  {
+   "fieldname": "column_break_zc6do",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "payment_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Payment Status",
+   "options": "\nPaid in full\nPart Paid\nNot Paid"
+  },
+  {
+   "fieldname": "column_break_vnsrx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-03-29 19:21:29.019178",
+ "modified_by": "Administrator",
+ "module": "Estate Management",
+ "name": "Estimate Other property Charge",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
