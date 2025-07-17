@@ -1,0 +1,92 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-05-03 12:16:55.318996",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_uqry",
+  "trans_date",
+  "name1",
+  "column_break_bgus",
+  "date_time",
+  "currency",
+  "column_break_mpqe",
+  "units_per_ngn",
+  "column_break_icgz",
+  "ngn_per_unit"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_uqry",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name1"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "units_per_ngn",
+   "fieldtype": "Float",
+   "label": "Units Per NGN"
+  },
+  {
+   "fieldname": "ngn_per_unit",
+   "fieldtype": "Float",
+   "label": "NGN Per Unit"
+  },
+  {
+   "fieldname": "column_break_bgus",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_mpqe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_icgz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "trans_date",
+   "fieldtype": "Date",
+   "label": "Trans Date"
+  },
+  {
+   "fieldname": "date_time",
+   "fieldtype": "Datetime",
+   "label": "Date Time"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-05-03 12:44:17.492194",
+ "modified_by": "Administrator",
+ "module": "Estate Management",
+ "name": "Exchange Rate",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

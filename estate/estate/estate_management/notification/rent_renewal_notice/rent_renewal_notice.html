@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header, .footer {
+            text-align: center;
+        }
+        .content p {
+            color: black;
+            margin: 0 0 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .success-banner {
+            background-color: #e8f5e9;
+            padding: 15px;
+            border-left: 5px solid #2E7D32;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 0.8em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2 style="color: #2E7D32;">Payment Received & Rent Renewal Confirmation</h2>
+        </div>
+
+        <div class="content">
+            <p>Dear {{ tenant_client }},</p>
+
+            <div class="success-banner">
+                We have successfully received your payment and renewed your rental agreement as detailed below.
+            </div>
+
+            <table>
+                <tr>
+                    <th>Property Name</th>
+                    <td>{{ property_name }}</td>
+                </tr>
+                <tr>
+                    <th>Property Address</th>
+                    <td>{{ address }}</td>
+                </tr>
+                <tr>
+                    <th>Agreement Number</th>
+                    <td>{{ rental_agreement_no }}</td>
+                </tr>
+                <tr>
+                    <th>Payment Reference</th>
+                    <td>{{ payment_reference or "N/A" }}</td>
+                </tr>
+                <tr>
+                    <th>Amount Received</th>
+                    <td>{{ frappe.format_value(base_rent, {"fieldtype": "Currency"}) }}</td>
+                </tr>
+                <tr>
+                    <th>Payment Date</th>
+                    <td>{{ frappe.utils.now_datetime().strftime('%Y-%m-%d') }}</td>
+                </tr>
+                <tr>
+                    <th>New Start Date</th>
+                    <td>{{ start_date }}</td>
+                </tr>
+                <tr>
+                    <th>New End Date</th>
+                    <td>{{ end_date }}</td>
+                </tr>
+                <tr>
+                    <th>Rent Frequency</th>
+                    <td>{{ rent_collection_frequency }}</td>
+                </tr>
+            </table>
+
+            <p><b>Next Steps:</b></p>
+            <ul>
+                <li>Your renewed rental agreement is now active</li>
+                <li>Next payment due: {{ next_payment_date }}</li>
+                <li>Please keep this confirmation for your records</li>
+            </ul>
+
+            <p><b>{{ _("View your agreement details: ") }}</b> {{ frappe.utils.get_link_to_form(doc.doctype, doc.name) }}</p>
+
+            <p>For any questions regarding this renewal, please contact:</p>
+            <ul>
+                <li>Property Manager: {{ property_manager_name }}</li>
+                <li>Contact Phone: {{ account_manager_mobile_phone }}</li>
+                <li>Email: {{ account_manager_official_email }}</li>
+            </ul>
+
+            <p>Thank you for your continued tenancy.</p>
+
+            <p>Sincerely,</p>
+            <p><b>{{ owner_name }}</b><br>Property Owner</p>
+        </div>
+
+        <div class="footer">
+            <p>This is an automated confirmation. Please do not reply to this message.</p>
+            <p>Generated on: {{ frappe.utils.now_datetime().strftime('%Y-%m-%d %H:%M') }}</p>
+        </div>
+    </div>
+</body>
+</html>

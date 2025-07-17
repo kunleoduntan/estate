@@ -1,0 +1,140 @@
+{
+ "actions": [],
+ "allow_events_in_timeline": 1,
+ "allow_import": 1,
+ "allow_rename": 1,
+ "creation": "2024-11-08 15:19:54.036249",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "service_detail_section",
+  "supplier_code",
+  "supplier_name",
+  "column_break_76bb",
+  "service_name",
+  "service_group",
+  "column_break_rsgh",
+  "service_description",
+  "contact_detail_section",
+  "main_contact",
+  "job_title",
+  "column_break_peay",
+  "email",
+  "mobile_tel",
+  "column_break_6wdg",
+  "note",
+  "title"
+ ],
+ "fields": [
+  {
+   "fieldname": "service_detail_section",
+   "fieldtype": "Section Break",
+   "label": "Service Detail"
+  },
+  {
+   "fieldname": "supplier_code",
+   "fieldtype": "Link",
+   "label": "Supplier Code",
+   "options": "Supplier"
+  },
+  {
+   "fetch_from": "supplier_code.supplier_name",
+   "fieldname": "supplier_name",
+   "fieldtype": "Data",
+   "label": "Supplier Name"
+  },
+  {
+   "fieldname": "column_break_76bb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "service_name",
+   "fieldtype": "Data",
+   "label": "Service Name"
+  },
+  {
+   "fieldname": "service_group",
+   "fieldtype": "Data",
+   "label": "Service Group"
+  },
+  {
+   "fieldname": "column_break_rsgh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "service_description",
+   "fieldtype": "Small Text",
+   "label": "Service Description"
+  },
+  {
+   "fieldname": "contact_detail_section",
+   "fieldtype": "Section Break",
+   "label": "Contact Detail"
+  },
+  {
+   "fieldname": "main_contact",
+   "fieldtype": "Data",
+   "label": "Main Contact"
+  },
+  {
+   "fieldname": "job_title",
+   "fieldtype": "Data",
+   "label": "Job Title"
+  },
+  {
+   "fieldname": "column_break_peay",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "mobile_tel",
+   "fieldtype": "Phone",
+   "label": "Mobile Tel"
+  },
+  {
+   "fieldname": "column_break_6wdg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Small Text",
+   "label": "Note"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Title"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-03-22 15:41:54.660483",
+ "modified_by": "Administrator",
+ "module": "Estate Management",
+ "name": "Supplier Services",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

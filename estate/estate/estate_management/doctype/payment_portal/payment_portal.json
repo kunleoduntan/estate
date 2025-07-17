@@ -1,0 +1,189 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-01-29 16:03:27.727402",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_fdfw",
+  "date",
+  "description",
+  "column_break_472c",
+  "amount",
+  "gateway_charge",
+  "column_break_0paz",
+  "bank_charges",
+  "net_amount",
+  "column_break_x0eg",
+  "client_territory",
+  "trans_currency",
+  "mode_of_payment",
+  "title",
+  "client_detail_section",
+  "customer_id",
+  "customer_last_name",
+  "column_break_41xx",
+  "customer_first_name",
+  "cost_center",
+  "column_break_s2ud",
+  "customer_name",
+  "column_break_vatm",
+  "fertismart_id",
+  "naming_series"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_fdfw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "column_break_472c",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Amount"
+  },
+  {
+   "fieldname": "gateway_charge",
+   "fieldtype": "Currency",
+   "label": "Gateway Charge"
+  },
+  {
+   "fieldname": "column_break_0paz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bank_charges",
+   "fieldtype": "Currency",
+   "label": "Bank charges"
+  },
+  {
+   "fieldname": "net_amount",
+   "fieldtype": "Currency",
+   "label": "Net Amount"
+  },
+  {
+   "fieldname": "column_break_x0eg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "customer_id.territory",
+   "fieldname": "client_territory",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Client Territory",
+   "read_only": 1
+  },
+  {
+   "fieldname": "trans_currency",
+   "fieldtype": "Link",
+   "label": "Trans Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "mode_of_payment",
+   "fieldtype": "Data",
+   "label": "Mode of Payment"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title"
+  },
+  {
+   "fieldname": "client_detail_section",
+   "fieldtype": "Section Break",
+   "label": "Client Detail"
+  },
+  {
+   "fieldname": "customer_id",
+   "fieldtype": "Link",
+   "label": "Customer ID",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "customer_last_name",
+   "fieldtype": "Data",
+   "label": "Customer Last Name"
+  },
+  {
+   "fieldname": "column_break_41xx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "customer_first_name",
+   "fieldtype": "Data",
+   "label": "Customer First Name"
+  },
+  {
+   "fieldname": "cost_center",
+   "fieldtype": "Link",
+   "label": "Cost Center",
+   "options": "Cost Center"
+  },
+  {
+   "fieldname": "column_break_s2ud",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "customer_id.customer_name",
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name"
+  },
+  {
+   "fieldname": "column_break_vatm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "customer_id.customer_existing_no",
+   "fieldname": "fertismart_id",
+   "fieldtype": "Data",
+   "label": "Fertismart ID"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-03-22 15:42:09.194222",
+ "modified_by": "Administrator",
+ "module": "Estate Management",
+ "name": "Payment Portal",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

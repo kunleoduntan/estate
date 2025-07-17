@@ -1,0 +1,178 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-03-10 09:33:07.193017",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "naming_series",
+  "report_date",
+  "month",
+  "criterion",
+  "column_break_etat",
+  "warehouse",
+  "company",
+  "column_break_strg",
+  "report_note",
+  "send_email",
+  "stock_level_analisis_section",
+  "stock_balance_entry",
+  "section_break_pghf",
+  "total",
+  "email_tab",
+  "column_break_bc0o",
+  "send_to",
+  "column_break_uvwi",
+  "cc",
+  "column_break_lnyo",
+  "bcc"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Title"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "STA-.DD.-.MM.-.YY.-.####"
+  },
+  {
+   "fieldname": "report_date",
+   "fieldtype": "Date",
+   "label": "Report Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "month",
+   "fieldtype": "Data",
+   "label": "Month"
+  },
+  {
+   "fieldname": "criterion",
+   "fieldtype": "Select",
+   "label": "Criterion ",
+   "options": "\nAvailability\nReorder Level"
+  },
+  {
+   "fieldname": "column_break_etat",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "warehouse",
+   "fieldtype": "Link",
+   "label": "Warehouse",
+   "options": "Warehouse",
+   "reqd": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_strg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "report_note",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Report Note",
+   "max_height": "110px"
+  },
+  {
+   "default": "0",
+   "fieldname": "send_email",
+   "fieldtype": "Check",
+   "label": "Send Email"
+  },
+  {
+   "fieldname": "stock_level_analisis_section",
+   "fieldtype": "Section Break",
+   "label": "Stock Level Analysis"
+  },
+  {
+   "fieldname": "stock_balance_entry",
+   "fieldtype": "Table",
+   "label": "Stock Balance Entry",
+   "options": "Stock Balance Entry"
+  },
+  {
+   "fieldname": "section_break_pghf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Currency",
+   "label": "Total"
+  },
+  {
+   "fieldname": "email_tab",
+   "fieldtype": "Tab Break",
+   "label": "Email"
+  },
+  {
+   "fieldname": "column_break_bc0o",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "send_to",
+   "fieldtype": "Small Text",
+   "label": "Send To"
+  },
+  {
+   "fieldname": "column_break_uvwi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cc",
+   "fieldtype": "Small Text",
+   "label": "Cc"
+  },
+  {
+   "fieldname": "column_break_lnyo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bcc",
+   "fieldtype": "Small Text",
+   "label": "Bcc"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-03-22 15:41:42.554026",
+ "modified_by": "Administrator",
+ "module": "Estate Management",
+ "name": "Stock Availability",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,91 @@
+{
+ "actions": [],
+ "allow_events_in_timeline": 1,
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "field:group_name",
+ "color": "Blue",
+ "creation": "2024-06-25 04:48:34.750356",
+ "default_view": "List",
+ "doctype": "DocType",
+ "document_type": "Setup",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "group_name",
+  "reporting_statement",
+  "column_break_5tst",
+  "group_description",
+  "report_sort_order"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title"
+  },
+  {
+   "fieldname": "group_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Group Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "reporting_statement",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Reporting Statement",
+   "options": "\nBalance Sheet\nIncome Statement\nCashflow Statement",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_5tst",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "group_description",
+   "fieldtype": "Small Text",
+   "label": "Group Description"
+  },
+  {
+   "fieldname": "report_sort_order",
+   "fieldtype": "Select",
+   "label": "Report Sort Order",
+   "options": "\n1 - Income\n2 - Cost of Sales\n3 - Admin Expense\n4 - Depreciation and charges\n5 - Selling and Marketing\n6 - Employees Costs\n7 - Finance Cost\n8 - Shared Cost\n9 - Other Income\n10 - Tax"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-03-22 15:42:05.319042",
+ "modified_by": "Administrator",
+ "module": "Estate Management",
+ "name": "Reporting Category",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "group_name",
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "group_name",
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

@@ -1,0 +1,82 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-04-27 14:32:00.089883",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_jdom",
+  "partner_name",
+  "address",
+  "column_break_manh",
+  "ref_no",
+  "grand_total",
+  "column_break_gvtf",
+  "terms",
+  "currency"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_jdom",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "partner_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Partner Name"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Address"
+  },
+  {
+   "fieldname": "ref_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Ref No"
+  },
+  {
+   "fieldname": "grand_total",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Grand Total"
+  },
+  {
+   "fieldname": "terms",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Terms"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "column_break_manh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_gvtf",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-04-27 14:36:43.070043",
+ "modified_by": "Administrator",
+ "module": "Estate Management",
+ "name": "Scanned Document",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

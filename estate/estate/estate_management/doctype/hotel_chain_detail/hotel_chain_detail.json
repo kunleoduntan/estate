@@ -1,0 +1,66 @@
+{
+ "actions": [],
+ "allow_events_in_timeline": 1,
+ "allow_rename": 1,
+ "autoname": "field:brand",
+ "creation": "2024-12-10 17:53:07.406711",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "brand_name",
+  "brand_name_description",
+  "column_break_scxf",
+  "title",
+  "brand"
+ ],
+ "fields": [
+  {
+   "fieldname": "brand_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Brand Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "brand_name_description",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Brand Name Description",
+   "max_height": "100px",
+   "reqd": 1,
+   "width": "200px"
+  },
+  {
+   "fieldname": "column_break_scxf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title"
+  },
+  {
+   "fieldname": "brand",
+   "fieldtype": "Link",
+   "label": "Brand",
+   "options": "Hotel Chain Brand",
+   "unique": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-03-22 15:41:52.611814",
+ "modified_by": "Administrator",
+ "module": "Estate Management",
+ "name": "Hotel Chain Detail",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,120 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-04-27 14:26:07.478632",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_ymw1",
+  "scan_date",
+  "column_break_ekn6",
+  "to_create",
+  "column_break_hlj9",
+  "document_review",
+  "scanned_document_detail_section",
+  "scanned_document",
+  "document_count",
+  "document_line_section",
+  "scanned_line",
+  "row_count",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_ymw1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "ScanCreate",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "scan_date",
+   "fieldtype": "Date",
+   "label": "Scan Date"
+  },
+  {
+   "fieldname": "to_create",
+   "fieldtype": "Select",
+   "label": "To Create",
+   "options": "\nSales Invoice\nPurchase Invoice\nPayments\nReceipts\nPurchase Order"
+  },
+  {
+   "fieldname": "document_review",
+   "fieldtype": "Small Text",
+   "label": "Document Review"
+  },
+  {
+   "fieldname": "column_break_ekn6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_hlj9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "scanned_document_detail_section",
+   "fieldtype": "Section Break",
+   "label": "Scanned Document Detail"
+  },
+  {
+   "fieldname": "scanned_document",
+   "fieldtype": "Table",
+   "label": "Scanned Document",
+   "options": "Scanned Document"
+  },
+  {
+   "fieldname": "document_count",
+   "fieldtype": "Int",
+   "label": "Document Count"
+  },
+  {
+   "fieldname": "document_line_section",
+   "fieldtype": "Section Break",
+   "label": "Document Line"
+  },
+  {
+   "fieldname": "scanned_line",
+   "fieldtype": "Table",
+   "label": "Scanned Line",
+   "options": "Scanned Line"
+  },
+  {
+   "fieldname": "row_count",
+   "fieldtype": "Int",
+   "label": "Row Count"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-04-27 14:44:09.305051",
+ "modified_by": "Administrator",
+ "module": "Estate Management",
+ "name": "ScanCreate",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

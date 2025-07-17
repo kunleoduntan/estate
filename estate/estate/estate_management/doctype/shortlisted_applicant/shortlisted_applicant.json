@@ -1,0 +1,290 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:SA-{applicant_name}-{designation}",
+ "creation": "2025-01-11 09:03:25.213286",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "applicant_detail_section",
+  "applicant_name",
+  "selection_score",
+  "column_break_zytl",
+  "designation",
+  "email_address",
+  "column_break_qimz",
+  "phone_number",
+  "column_break_vfjs",
+  "country",
+  "selection_criteria_section",
+  "education",
+  "professional_qualifications",
+  "column_break_6pis",
+  "experience_years",
+  "age",
+  "column_break_ax2a",
+  "religion",
+  "skills",
+  "column_break_t3iy",
+  "location_preference",
+  "certifications",
+  "title",
+  "section_break_6l9o",
+  "current_role",
+  "course_of_study",
+  "column_break_gvpv",
+  "school_attended",
+  "institution_type",
+  "column_break_0xzh",
+  "industries_worked",
+  "score_tab",
+  "score_detail_section",
+  "cv_selection_scores"
+ ],
+ "fields": [
+  {
+   "fieldname": "applicant_detail_section",
+   "fieldtype": "Section Break",
+   "label": "Applicant Detail"
+  },
+  {
+   "fieldname": "applicant_name",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Applicant Name"
+  },
+  {
+   "fieldname": "selection_score",
+   "fieldtype": "Float",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Selection Score %",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_zytl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Designation"
+  },
+  {
+   "fieldname": "email_address",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Email Address"
+  },
+  {
+   "fieldname": "column_break_qimz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Phone Number"
+  },
+  {
+   "fieldname": "column_break_vfjs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "label": "Country",
+   "options": "Country"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "selection_criteria_section",
+   "fieldtype": "Section Break",
+   "label": "Selection Criteria"
+  },
+  {
+   "fieldname": "education",
+   "fieldtype": "Small Text",
+   "label": "Education",
+   "max_height": "100px"
+  },
+  {
+   "fieldname": "professional_qualifications",
+   "fieldtype": "Small Text",
+   "label": "Professional Qualifications",
+   "max_height": "100px"
+  },
+  {
+   "fieldname": "column_break_6pis",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "experience_years",
+   "fieldtype": "Int",
+   "label": "Experience Years"
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Int",
+   "label": "Age"
+  },
+  {
+   "fieldname": "column_break_ax2a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "religion",
+   "fieldtype": "Data",
+   "label": "Religion"
+  },
+  {
+   "fieldname": "skills",
+   "fieldtype": "Small Text",
+   "label": "Skills",
+   "max_height": "100px"
+  },
+  {
+   "fieldname": "column_break_t3iy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "location_preference",
+   "fieldtype": "Data",
+   "label": "Location Preference "
+  },
+  {
+   "fieldname": "certifications",
+   "fieldtype": "Small Text",
+   "label": "Certifications",
+   "max_height": "100px"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_6l9o",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "current_role",
+   "fieldtype": "Small Text",
+   "label": "Current Role",
+   "max_height": "100px"
+  },
+  {
+   "fieldname": "course_of_study",
+   "fieldtype": "Small Text",
+   "label": "Course of Study",
+   "max_height": "100px"
+  },
+  {
+   "fieldname": "column_break_gvpv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "school_attended",
+   "fieldtype": "Select",
+   "label": "School Attended",
+   "max_height": "100px",
+   "options": "\nPolytechnic\nUniversity\nCollege\nNSE"
+  },
+  {
+   "fieldname": "institution_type",
+   "fieldtype": "Select",
+   "label": "Institution Type",
+   "options": "\nPrivate\nPublic\nForeign"
+  },
+  {
+   "fieldname": "column_break_0xzh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "industries_worked",
+   "fieldtype": "Small Text",
+   "label": "Industries Worked",
+   "max_height": "100px",
+   "options": "\n"
+  },
+  {
+   "fieldname": "score_tab",
+   "fieldtype": "Tab Break",
+   "label": "Score"
+  },
+  {
+   "fieldname": "score_detail_section",
+   "fieldtype": "Section Break",
+   "label": "Score Detail"
+  },
+  {
+   "fieldname": "cv_selection_scores",
+   "fieldtype": "Table",
+   "label": "CV Selection Scores",
+   "options": "CV Selection Scores"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-04-24 15:42:31.608955",
+ "modified_by": "Administrator",
+ "module": "Estate Management",
+ "name": "Shortlisted Applicant",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

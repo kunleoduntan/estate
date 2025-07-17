@@ -1,0 +1,30 @@
+{
+ "attach_print": 0,
+ "channel": "Email",
+ "condition": "",
+ "creation": "2025-04-01 15:05:51.374838",
+ "date_changed": "end_date",
+ "days_in_advance": 1,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Property",
+ "enabled": 1,
+ "event": "Days Before",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n    \r\n    <style>\r\n        .container {\r\n            max-width: 600px;\r\n            margin: 0 auto;\r\n            padding: 20px;\r\n            border: 1px solid #ddd;\r\n            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);\r\n        }\r\n        .header, .footer {\r\n            text-align: center;\r\n        }\r\n        .content p {\r\n            color: black;\r\n            margin: 0 0 10px;\r\n        }\r\n        table {\r\n            width: 100%;\r\n            border-collapse: collapse;\r\n            margin: 20px 0;\r\n        }\r\n        table, th, td {\r\n            border: 1px solid #ddd;\r\n        }\r\n        th, td {\r\n            padding: 8px;\r\n            text-align: left;\r\n        }\r\n        th {\r\n            background-color: #4CAF50; /* Changed from cyan to green */\r\n            color: white;\r\n        }\r\n        .highlight {\r\n            background-color: #e8f5e9; /* Light green highlight */\r\n            padding: 2px 5px;\r\n            border-radius: 3px;\r\n            font-weight: bold;\r\n        }\r\n        .action {\r\n            color: #2E7D32; /* Darker green for action items */\r\n            font-weight: bold;\r\n        }\r\n        .footer {\r\n            margin-top: 20px;\r\n            font-size: 0.8em;\r\n            color: #666;\r\n        }\r\n    </style>\r\n</head>\r\n<body>\r\n    <div class=\"container\">\r\n        <div class=\"header\">\r\n            <h2 style=\"color: #2E7D32;\">Rental Agreement Renewal Notice</h2>\r\n        </div>\r\n\r\n        <div class=\"content\">\r\n            <p>Dear {% if property_manager_name %}{{ property_manager_name }}{% else %}Property Manager{% endif %},</p>\r\n\r\n           <p>The following rental agreement is eligible for renewal. Please review the details and initiate the renewal process:</p>\r\n\r\n            <table>\r\n                <tr>\r\n                    <th>Property Name</th>\r\n                    <td>{{ property_name }}</td>\r\n                </tr>\r\n                <tr>\r\n                    <th>Property Type</th>\r\n                    <td>{{ property_type }}</td>\r\n                </tr>\r\n                <tr>\r\n                    <th>Owner</th>\r\n                    <td>{{ owner_name }}</td>\r\n                </tr>\r\n                <tr>\r\n                    <th>Tenant</th>\r\n                    <td>{{ tenant_client }}</td>\r\n                </tr>\r\n                <tr>\r\n                    <th>Current Agreement Number</th>\r\n                    <td>{{ rental_agreement_no }}</td>\r\n                </tr>\r\n                <tr>\r\n                    <th>Current End Date</th>\r\n                    <td class=\"action\">{{ end_date }}</td>\r\n                </tr>\r\n                <tr>\r\n                    <th>Days Until Expiration</th>\r\n                    <td class=\"action\">{{ days_remaining }} days</td>\r\n                </tr>\r\n                <tr>\r\n                    <th>Current Base Rent</th>\r\n                    <td>{{ frappe.format_value(base_rent, {\"fieldtype\": \"Currency\"}) }}</td>\r\n                </tr>\r\n                <tr>\r\n                    <th>Rent Frequency</th>\r\n                    <td>{{ rent_collection_frequency }}</td>\r\n                </tr>\r\n                <tr>\r\n                    <th>Security Deposit</th>\r\n                    <td>{{ frappe.format_value(security_deposit, {\"fieldtype\": \"Currency\"}) }}</td>\r\n                </tr>\r\n            </table>\r\n\r\n            <p><span class=\"highlight\">RENEWAL OPTIONS:</span> Please consider the following for renewal:</p>\r\n            <ul>\r\n                <li>Extend the current terms for another term</li>\r\n                <li>Adjust rental rate based on market conditions</li>\r\n                <li>Update any agreement terms as needed</li>\r\n            </ul>\r\n\r\n            <p><b>{{ _(\"Access the full agreement details here: \") }}</b> {{ frappe.utils.get_link_to_form(doc.doctype, doc.name) }}</p>\r\n\r\n            <p>Contact Information for Renewal Discussion:</p>\r\n            <ul>\r\n                <li>Property Owner: {{ property_owner_mobile_phone }} | {{ property_owner_personal_email }}</li>\r\n                <li>Tenant: {{ mobile_phone }} | {{ personal_email }}</li>\r\n            </ul>\r\n\r\n            <p>Please initiate the renewal process at your earliest convenience to ensure continuous tenancy.</p>\r\n\r\n            <p>Best regards,</p>\r\n            <p><b>ERPNext Property Management</b></p>\r\n        </div>\r\n\r\n        <div class=\"footer\">\r\n            <p>This is an automated notification. For any questions, please contact your system administrator.</p>\r\n            <p>Generated on: {{ frappe.utils.now_datetime().strftime('%Y-%m-%d') }}</p>\r\n        </div>\r\n    </div>\r\n</body>\r\n</html>",
+ "message_type": "HTML",
+ "modified": "2025-04-01 15:45:18.960294",
+ "modified_by": "Administrator",
+ "module": "Estate Management",
+ "name": "Eligibility for Rent Renewal",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_document_field": "owner"
+  }
+ ],
+ "send_system_notification": 0,
+ "send_to_all_assignees": 0,
+ "subject": "{{doc.client_name}} Rent Eligibility for Renewal"
+}

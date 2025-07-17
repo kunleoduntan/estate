@@ -1,0 +1,140 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-03-23 12:32:56.907196",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "property_id",
+  "maintenance_type",
+  "urgency_level",
+  "column_break_gojon",
+  "preferred_vendor",
+  "vendor_name",
+  "column_break_vlmhp",
+  "description_of_issue",
+  "other_details_section",
+  "vendor_phone_no",
+  "vendor_email",
+  "column_break_ahcoj",
+  "approved_cost",
+  "estimated_start_date",
+  "column_break_r9rbb",
+  "estimated_completion_date",
+  "estimated_cost"
+ ],
+ "fields": [
+  {
+   "fieldname": "property_id",
+   "fieldtype": "Data",
+   "label": "Property ID"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "maintenance_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Maintenance Type ",
+   "options": "Maintenance Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "urgency_level",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Urgency Level",
+   "options": "\nLow\nMedium\nHigh\nEmergency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_gojon",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "preferred_vendor",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Preferred Vendor",
+   "options": "Supplier",
+   "reqd": 1
+  },
+  {
+   "fieldname": "vendor_name",
+   "fieldtype": "Data",
+   "label": "Vendor Name"
+  },
+  {
+   "fieldname": "column_break_vlmhp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "description_of_issue",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Description of Issue",
+   "reqd": 1
+  },
+  {
+   "fieldname": "other_details_section",
+   "fieldtype": "Section Break",
+   "label": "Other Details"
+  },
+  {
+   "fieldname": "vendor_phone_no",
+   "fieldtype": "Phone",
+   "in_list_view": 1,
+   "label": "Vendor Phone No"
+  },
+  {
+   "fieldname": "vendor_email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Vendor Email"
+  },
+  {
+   "fieldname": "column_break_ahcoj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "estimated_start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Estimated Start Date"
+  },
+  {
+   "fieldname": "column_break_r9rbb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "estimated_completion_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Estimated Completion Date"
+  },
+  {
+   "fieldname": "approved_cost",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Approved Cost"
+  },
+  {
+   "fieldname": "estimated_cost",
+   "fieldtype": "Currency",
+   "label": "Estimated Cost"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-03-23 12:40:43.954769",
+ "modified_by": "Administrator",
+ "module": "Estate Management",
+ "name": "Maintenance History",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

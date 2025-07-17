@@ -1,0 +1,657 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-03-22 12:56:31.348331",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item_code",
+  "property_name",
+  "property_type",
+  "column_break_demux",
+  "owner1",
+  "owner_name",
+  "column_break_sdhkq",
+  "address",
+  "column_break_tozvg",
+  "state",
+  "country",
+  "show_location",
+  "location_section",
+  "location",
+  "property_detail_section",
+  "property_status",
+  "column_break_3ibtk",
+  "total_area",
+  "column_break_lxodq",
+  "number_of_floors",
+  "column_break_puuwm",
+  "construction_year",
+  "column_break_6gsef",
+  "condition",
+  "additional_considerations_section",
+  "refundable_deposit",
+  "rent_due_date",
+  "column_break_b63u",
+  "penalty_for_late_payment",
+  "column_break_htn3",
+  "is_pet_allowed",
+  "column_break_xn6l",
+  "is_subletting_allowed",
+  "maintenance_responsibility",
+  "amenities_section",
+  "amenities",
+  "column_break_ms24k",
+  "title_document",
+  "commercials_tab",
+  "commericial_section",
+  "market_value",
+  "total_other_billable_fees",
+  "column_break_cn3dt",
+  "annual_property_tax",
+  "column_break_ckq9w",
+  "insurance_details",
+  "column_break_p1z5f",
+  "property_manager",
+  "property_manager_name",
+  "other_billable_fees_section",
+  "other_property_deal_charges",
+  "rental_info_tab",
+  "lease_type",
+  "rent_collection_frequency",
+  "column_break_zd6xf",
+  "base_rent",
+  "column_break_tanoi",
+  "security_deposit",
+  "column_break_602kc",
+  "late_payment_fee",
+  "tenancy_section",
+  "tenant_id",
+  "tenant_client",
+  "column_break_3siu7",
+  "start_date",
+  "end_date",
+  "column_break_b1k5d",
+  "rental_agreement_no",
+  "commission_rate",
+  "column_break_wxkjr",
+  "commission_amount",
+  "contact_info_tab",
+  "owner_contact_section",
+  "property_owner_mobile_phone",
+  "property_owner_phone_no",
+  "column_break_rayfn",
+  "property_owner_personal_email",
+  "column_break_bzhzf",
+  "property_owner_official_email",
+  "client_contact_section",
+  "mobile_phone",
+  "phone_no",
+  "column_break_amm0k",
+  "personal_email",
+  "column_break_dbvml",
+  "official_email",
+  "account_manager_section",
+  "account_manager_mobile_phone",
+  "account_manager_phone_no",
+  "column_break_xuqas",
+  "account_manager_personal_email",
+  "column_break_xtv8r",
+  "account_manager_official_email",
+  "features_tab",
+  "copy_from_template",
+  "column_break_umj22",
+  "get_template",
+  "column_break_kt4za",
+  "section_break_ixbcj",
+  "property_feature",
+  "history_tab",
+  "maintenance_history"
+ ],
+ "fields": [
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "label": "Item Code",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "item_code.custom_property_name",
+   "fieldname": "property_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Property Name"
+  },
+  {
+   "fetch_from": "item_code.custom_property_type",
+   "fieldname": "property_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Property Type",
+   "options": "Property Type"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "Address",
+   "max_height": "110px"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Geolocation",
+   "label": "Map"
+  },
+  {
+   "fetch_from": "item_code.custom_owner",
+   "fieldname": "owner1",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Owner",
+   "options": "Supplier"
+  },
+  {
+   "fieldname": "owner_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Owner Name"
+  },
+  {
+   "fieldname": "property_detail_section",
+   "fieldtype": "Section Break",
+   "label": "Property Detail"
+  },
+  {
+   "fieldname": "property_status",
+   "fieldtype": "Select",
+   "label": "Property Status",
+   "options": "\nAvailable\nLeased\nUnder Maintenance\nSold"
+  },
+  {
+   "fieldname": "number_of_floors",
+   "fieldtype": "Int",
+   "label": "Number of Floors"
+  },
+  {
+   "description": "\n\n\n\n\n\n\n\n, ",
+   "fieldname": "amenities_section",
+   "fieldtype": "Section Break",
+   "label": "Amenities & Title"
+  },
+  {
+   "description": "Are things that describe what a property offers eg. Swimming Pool.\n",
+   "fieldname": "amenities",
+   "fieldtype": "Table",
+   "label": "Amenities",
+   "options": "Property Amenities"
+  },
+  {
+   "fieldname": "total_area",
+   "fieldtype": "Float",
+   "label": "Total Area"
+  },
+  {
+   "fieldname": "construction_year",
+   "fieldtype": "Date",
+   "label": "Construction Year"
+  },
+  {
+   "fieldname": "condition",
+   "fieldtype": "Select",
+   "label": "Condition",
+   "options": "\nNew\nGood\nNeeds Repair"
+  },
+  {
+   "fieldname": "insurance_details",
+   "fieldtype": "Data",
+   "label": "Insurance No"
+  },
+  {
+   "fieldname": "property_manager",
+   "fieldtype": "Link",
+   "label": "Property Manager",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "property_manager_name",
+   "fieldtype": "Data",
+   "label": "Property Manager Name"
+  },
+  {
+   "fieldname": "column_break_demux",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_sdhkq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_tozvg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "show_location",
+   "fieldname": "location_section",
+   "fieldtype": "Section Break",
+   "label": "Location"
+  },
+  {
+   "fieldname": "column_break_3ibtk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_lxodq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_puuwm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_6gsef",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "market_value",
+   "fieldtype": "Currency",
+   "label": "Market Value"
+  },
+  {
+   "fieldname": "column_break_cn3dt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "annual_property_tax",
+   "fieldtype": "Float",
+   "label": "Annual Property Tax"
+  },
+  {
+   "fieldname": "column_break_ckq9w",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_p1z5f",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "show_location",
+   "fieldtype": "Check",
+   "label": "Show Location"
+  },
+  {
+   "fieldname": "rental_info_tab",
+   "fieldtype": "Tab Break",
+   "label": "Rental Info"
+  },
+  {
+   "fieldname": "lease_type",
+   "fieldtype": "Link",
+   "label": "Lease Type",
+   "options": "Lease Type"
+  },
+  {
+   "fieldname": "rent_collection_frequency",
+   "fieldtype": "Select",
+   "label": "Rent Collection Frequency",
+   "options": "\nMonthly\nQuarterly\nYearly"
+  },
+  {
+   "fieldname": "column_break_zd6xf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "base_rent",
+   "fieldtype": "Currency",
+   "label": "Base Rent"
+  },
+  {
+   "fieldname": "column_break_tanoi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "security_deposit",
+   "fieldtype": "Currency",
+   "label": "Security Deposit"
+  },
+  {
+   "fieldname": "column_break_602kc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "late_payment_fee",
+   "fieldtype": "Float",
+   "label": "Late Payment Fee "
+  },
+  {
+   "fieldname": "tenancy_section",
+   "fieldtype": "Section Break",
+   "label": "Tenancy"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "column_break_3siu7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "column_break_b1k5d",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "commission_rate",
+   "fieldtype": "Float",
+   "label": "Commission Rate"
+  },
+  {
+   "fieldname": "column_break_wxkjr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "commission_amount",
+   "fieldtype": "Currency",
+   "label": "Commission Amount"
+  },
+  {
+   "fieldname": "tenant_id",
+   "fieldtype": "Link",
+   "label": "Tenant ID",
+   "options": "Customer"
+  },
+  {
+   "depends_on": "tenant_id",
+   "fetch_from": "tenant_id.customer_name",
+   "fieldname": "tenant_client",
+   "fieldtype": "Data",
+   "label": "Tenant (Client)"
+  },
+  {
+   "fieldname": "rental_agreement_no",
+   "fieldtype": "Data",
+   "label": "Rental Agreement No"
+  },
+  {
+   "fieldname": "column_break_ms24k",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "commericial_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Link",
+   "label": "State",
+   "options": "State"
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "label": "Country",
+   "options": "Country"
+  },
+  {
+   "fieldname": "contact_info_tab",
+   "fieldtype": "Tab Break",
+   "label": "Contact Info"
+  },
+  {
+   "fieldname": "owner_contact_section",
+   "fieldtype": "Section Break",
+   "label": "Owner Contact"
+  },
+  {
+   "fieldname": "column_break_rayfn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_bzhzf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "account_manager_section",
+   "fieldtype": "Section Break",
+   "label": "Account Manager"
+  },
+  {
+   "fieldname": "property_owner_mobile_phone",
+   "fieldtype": "Phone",
+   "label": "Mobile Phone"
+  },
+  {
+   "fieldname": "property_owner_phone_no",
+   "fieldtype": "Phone",
+   "label": "Phone No"
+  },
+  {
+   "fieldname": "property_owner_personal_email",
+   "fieldtype": "Data",
+   "label": "Personal Email"
+  },
+  {
+   "fieldname": "property_owner_official_email",
+   "fieldtype": "Data",
+   "label": "Official Email"
+  },
+  {
+   "fieldname": "column_break_xuqas",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_xtv8r",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "account_manager_mobile_phone",
+   "fieldtype": "Phone",
+   "label": "Mobile Phone"
+  },
+  {
+   "fieldname": "account_manager_phone_no",
+   "fieldtype": "Phone",
+   "label": "Phone No"
+  },
+  {
+   "fieldname": "account_manager_personal_email",
+   "fieldtype": "Data",
+   "label": "Personal Email"
+  },
+  {
+   "fieldname": "account_manager_official_email",
+   "fieldtype": "Data",
+   "label": "Official Email"
+  },
+  {
+   "fieldname": "client_contact_section",
+   "fieldtype": "Section Break",
+   "label": "Client Contact "
+  },
+  {
+   "fieldname": "mobile_phone",
+   "fieldtype": "Phone",
+   "label": "Mobile Phone"
+  },
+  {
+   "fieldname": "phone_no",
+   "fieldtype": "Phone",
+   "label": "Phone No"
+  },
+  {
+   "fieldname": "column_break_amm0k",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "personal_email",
+   "fieldtype": "Data",
+   "label": "Personal Email"
+  },
+  {
+   "fieldname": "column_break_dbvml",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "official_email",
+   "fieldtype": "Data",
+   "label": "Official Email"
+  },
+  {
+   "fieldname": "history_tab",
+   "fieldtype": "Tab Break",
+   "label": "History"
+  },
+  {
+   "fieldname": "maintenance_history",
+   "fieldtype": "Table",
+   "label": "Maintenance History",
+   "options": "Maintenance History"
+  },
+  {
+   "fieldname": "features_tab",
+   "fieldtype": "Tab Break",
+   "label": "Features"
+  },
+  {
+   "description": "Features are inherent characteristics or components of a property. They are often structural or built-in. They describe what a property is. eg Number of bedrooms and bathrooms while Amenities are additions or extras that enhance the comfort, convenience, or desirability of a property, They describe what a property offers They are things that are available at the surrounding eg Swimming pool, Fitness Center,",
+   "fieldname": "section_break_ixbcj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "property_feature",
+   "fieldtype": "Table",
+   "label": "Property Feature",
+   "options": "Property Feature"
+  },
+  {
+   "fieldname": "copy_from_template",
+   "fieldtype": "Link",
+   "label": "Copy From Template",
+   "options": "Property Features Template"
+  },
+  {
+   "fieldname": "column_break_umj22",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "get_template",
+   "fieldtype": "Button",
+   "label": "Get Template"
+  },
+  {
+   "fieldname": "column_break_kt4za",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "commercials_tab",
+   "fieldtype": "Tab Break",
+   "label": "Commercials"
+  },
+  {
+   "fieldname": "other_billable_fees_section",
+   "fieldtype": "Section Break",
+   "label": "Other Billable Fees"
+  },
+  {
+   "fieldname": "other_property_deal_charges",
+   "fieldtype": "Table",
+   "label": "Other Property Deal Charges",
+   "options": "Other Property Deal Charges"
+  },
+  {
+   "description": "\n\nThis table would contain the list of property documents. ",
+   "fieldname": "title_document",
+   "fieldtype": "Table",
+   "label": "Title Document ",
+   "options": "Property Document Detail"
+  },
+  {
+   "fieldname": "total_other_billable_fees",
+   "fieldtype": "Currency",
+   "label": "Total Other Billable Fees"
+  },
+  {
+   "fieldname": "additional_considerations_section",
+   "fieldtype": "Section Break",
+   "label": "Additional Considerations"
+  },
+  {
+   "fieldname": "refundable_deposit",
+   "fieldtype": "Currency",
+   "label": "Refundable deposit"
+  },
+  {
+   "fieldname": "rent_due_date",
+   "fieldtype": "Date",
+   "label": "Rent Due Date"
+  },
+  {
+   "fieldname": "column_break_b63u",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "penalty_for_late_payment",
+   "fieldtype": "Currency",
+   "label": "Penalty for Late Payment"
+  },
+  {
+   "fieldname": "column_break_htn3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "is_pet_allowed",
+   "fieldtype": "Select",
+   "label": "Is Pet Allowed",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "column_break_xn6l",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "is_subletting_allowed",
+   "fieldtype": "Select",
+   "label": "Is Subletting Allowed",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "maintenance_responsibility",
+   "fieldtype": "Select",
+   "label": "Maintenance Responsibility",
+   "options": "\nTenant\nLandlord Duties"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-06-03 11:29:35.030690",
+ "modified_by": "Administrator",
+ "module": "Estate Management",
+ "name": "Property",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

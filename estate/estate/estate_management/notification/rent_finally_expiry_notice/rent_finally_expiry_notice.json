@@ -1,0 +1,30 @@
+{
+ "attach_print": 0,
+ "channel": "Email",
+ "condition": "",
+ "creation": "2025-04-01 15:00:50.385823",
+ "date_changed": "end_date",
+ "days_in_advance": 1,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Property",
+ "enabled": 1,
+ "event": "Days Before",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    \n    <style>\n        .container {\n            max-width: 600px;\n            margin: 0 auto;\n            padding: 20px;\n            border: 1px solid #ddd;\n            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);\n        }\n        .header, .footer {\n            text-align: center;\n        }\n        .content p {\n            color: black;\n            margin: 0 0 10px;\n        }\n        table {\n            width: 100%;\n            border-collapse: collapse;\n            margin: 20px 0;\n        }\n        table, th, td {\n            border: 1px solid #ddd;\n        }\n        th, td {\n            padding: 8px;\n            text-align: left;\n        }\n        th {\n            background-color: #00ffff;\n        }\n        .highlight {\n            background-color: #fffacd;\n            padding: 2px 5px;\n            border-radius: 3px;\n            font-weight: bold;\n        }\n        .urgent {\n            color: #ff0000;\n            font-weight: bold;\n        }\n    </style>\n</head>\n<body>\n    <div class=\"container\">\n        <div class=\"header\">\n            <h2>Rental Agreement Expiration Notice</h2>\n        </div>\n\n        <div class=\"content\">\n            <p>Dear {% if property_manager_name %}{{ property_manager_name }}{% else %}Property Manager{% endif %},</p>\n\n           <p>This is to notify you that the following rental agreement is approaching its expiration date:</p>\n\n            <table>\n                <tr>\n                    <th>Property Name</th>\n                    <td>{{ property_name }}</td>\n                </tr>\n                <tr>\n                    <th>Property Type</th>\n                    <td>{{ property_type }}</td>\n                </tr>\n                <tr>\n                    <th>Owner</th>\n                    <td>{{ owner_name }}</td>\n                </tr>\n                <tr>\n                    <th>Tenant</th>\n                    <td>{{ tenant_client }}</td>\n                </tr>\n                <tr>\n                    <th>Agreement Number</th>\n                    <td>{{ rental_agreement_no }}</td>\n                </tr>\n                <tr>\n                    <th>Start Date</th>\n                    <td>{{ start_date }}</td>\n                </tr>\n                <tr>\n                    <th>End Date</th>\n                    <td class=\"urgent\">{{ end_date }}</td>\n                </tr>\n                <tr>\n                    <th>Days Remaining</th>\n                    <td class=\"urgent\">{{ days_remaining }} days</td>\n                </tr>\n                <tr>\n                    <th>Base Rent</th>\n                    <td>{{ frappe.format_value(base_rent, {\"fieldtype\": \"Currency\"}) }}</td>\n                </tr>\n                <tr>\n                    <th>Rent Frequency</th>\n                    <td>{{ rent_collection_frequency }}</td>\n                </tr>\n                <tr>\n                    <th>Security Deposit</th>\n                    <td>{{ frappe.format_value(security_deposit, {\"fieldtype\": \"Currency\"}) }}</td>\n                </tr>\n                <tr>\n                    <th>Property Manager</th>\n                    <td>{{ property_manager_name }}</td>\n                </tr>\n            </table>\n\n            <p><span class=\"highlight\">ACTION REQUIRED:</span> Please review this agreement and take appropriate action before the expiration date.</p>\n\n            <p><b>{{ _(\"Full details can be found in the ERP system: \") }}</b> {{ frappe.utils.get_link_to_form(doc.doctype, doc.name) }}</p>\n\n            <p>Contact Information:</p>\n            <ul>\n                <li>Owner: {{ property_owner_mobile_phone }} | {{ property_owner_personal_email }}</li>\n                <li>Tenant: {{ mobile_phone }} | {{ personal_email }}</li>\n            </ul>\n\n            <p>Thank you,</p>\n            <p><b>ERPNext Property Management System</b></p>\n        </div>\n\n        <div class=\"footer\">\n            <p>This is an automated notification. Please do not reply to this message.</p>\n        </div>\n    </div>\n</body>\n</html>",
+ "message_type": "HTML",
+ "modified": "2025-04-01 15:45:29.966549",
+ "modified_by": "Administrator",
+ "module": "Estate Management",
+ "name": "Rent Finally Expiry Notice",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_document_field": "owner"
+  }
+ ],
+ "send_system_notification": 0,
+ "send_to_all_assignees": 0,
+ "subject": "{{doc.client_name}} Two Weeks Rent Expiration Notice"
+}

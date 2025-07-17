@@ -1,0 +1,219 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-07-07 15:34:04.184595",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "reporting_date",
+  "start_date",
+  "column_break_5vi2",
+  "end_date",
+  "project_type",
+  "title",
+  "column_break_cikj",
+  "description",
+  "column_break_h2rx",
+  "apply_global_percentage",
+  "global_percentage",
+  "naming_series",
+  "deferred_revenue_account",
+  "deferred_cost_account",
+  "process_recognition",
+  "project_revenue_and_cost_detail_section",
+  "project_analysis",
+  "total_section",
+  "total_income",
+  "column_break_sy23",
+  "total_cost",
+  "column_break_cfdw",
+  "profit",
+  "column_break_0n9n",
+  "average_margin",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "reporting_date",
+   "fieldtype": "Date",
+   "label": "Reporting Date"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "column_break_5vi2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "project_type",
+   "fieldtype": "Link",
+   "label": "Project Type",
+   "options": "Project Type"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Title"
+  },
+  {
+   "fieldname": "column_break_cikj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "column_break_h2rx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "apply_global_percentage",
+   "fieldtype": "Check",
+   "label": "Apply Global Percentage"
+  },
+  {
+   "depends_on": "apply_global_percentage",
+   "fieldname": "global_percentage",
+   "fieldtype": "Float",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Global Percentage"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series"
+  },
+  {
+   "fieldname": "deferred_revenue_account",
+   "fieldtype": "Link",
+   "label": "Deferred Revenue Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "deferred_cost_account",
+   "fieldtype": "Link",
+   "label": "Deferred Cost Account",
+   "options": "Account"
+  },
+  {
+   "default": "0",
+   "fieldname": "process_recognition",
+   "fieldtype": "Check",
+   "label": "Process Recognition"
+  },
+  {
+   "fieldname": "project_revenue_and_cost_detail_section",
+   "fieldtype": "Section Break",
+   "label": "Project Revenue and Cost Detail"
+  },
+  {
+   "fieldname": "project_analysis",
+   "fieldtype": "Table",
+   "label": "Project Analysis",
+   "options": "Project Analysis"
+  },
+  {
+   "fieldname": "total_section",
+   "fieldtype": "Section Break",
+   "label": "Total"
+  },
+  {
+   "fieldname": "total_income",
+   "fieldtype": "Currency",
+   "label": "Total Income",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_sy23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_cost",
+   "fieldtype": "Currency",
+   "label": "Total Cost",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_cfdw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "profit",
+   "fieldtype": "Currency",
+   "label": "Profit",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_0n9n",
+   "fieldtype": "Column Break",
+   "read_only": 1
+  },
+  {
+   "fieldname": "average_margin",
+   "fieldtype": "Float",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Average Margin",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Project Revenue Analysis",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-03-22 15:42:04.278720",
+ "modified_by": "Administrator",
+ "module": "Estate Management",
+ "name": "Project Revenue Analysis",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

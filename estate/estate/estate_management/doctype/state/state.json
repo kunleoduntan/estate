@@ -1,0 +1,68 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:state_name",
+ "creation": "2025-03-23 10:02:48.736264",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "state_name",
+  "column_break_zxc3t",
+  "state_capital",
+  "column_break_nj8xo",
+  "no_of_lga"
+ ],
+ "fields": [
+  {
+   "fieldname": "state_name",
+   "fieldtype": "Data",
+   "label": "State Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_zxc3t",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "state_capital",
+   "fieldtype": "Data",
+   "label": "State Capital"
+  },
+  {
+   "fieldname": "column_break_nj8xo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "no_of_lga",
+   "fieldtype": "Int",
+   "label": "No of LGA"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-03-23 10:02:48.736264",
+ "modified_by": "Administrator",
+ "module": "Estate Management",
+ "name": "State",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

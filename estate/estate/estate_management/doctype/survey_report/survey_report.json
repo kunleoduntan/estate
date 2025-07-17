@@ -1,0 +1,218 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-10-17 14:21:13.622224",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "report_date",
+  "customer_id",
+  "customer_name",
+  "column_break_u8aj",
+  "project_code",
+  "project_name",
+  "column_break_pd1p",
+  "estimated_start_date",
+  "estimated_end_date",
+  "column_break_ivrc",
+  "subject_of_report",
+  "report_details_section",
+  "template_for_survey_scope",
+  "scope_of_survey",
+  "table_of_content_section",
+  "template_for_table_of_content",
+  "table_of_content",
+  "executive_summary_section",
+  "template_for_executive_summary",
+  "executive_summary",
+  "requirement_tab",
+  "requirements_section",
+  "section_title",
+  "material",
+  "requirements_x1_section",
+  "section_title_x1",
+  "material_x1"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Title"
+  },
+  {
+   "fieldname": "report_date",
+   "fieldtype": "Date",
+   "label": "Report Date"
+  },
+  {
+   "fieldname": "customer_id",
+   "fieldtype": "Link",
+   "label": "Customer ID",
+   "options": "Customer"
+  },
+  {
+   "fetch_from": "customer_id.customer_name",
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name"
+  },
+  {
+   "fieldname": "column_break_u8aj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "project_code",
+   "fieldtype": "Link",
+   "label": "Project Code",
+   "options": "Project"
+  },
+  {
+   "fetch_from": "project_code.project_name",
+   "fieldname": "project_name",
+   "fieldtype": "Data",
+   "label": "Project Name"
+  },
+  {
+   "fieldname": "column_break_pd1p",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "estimated_start_date",
+   "fieldtype": "Date",
+   "label": "Estimated Start date"
+  },
+  {
+   "fieldname": "estimated_end_date",
+   "fieldtype": "Date",
+   "label": "Estimated End Date"
+  },
+  {
+   "fieldname": "column_break_ivrc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "subject_of_report",
+   "fieldtype": "Small Text",
+   "label": "Subject of Report"
+  },
+  {
+   "fieldname": "report_details_section",
+   "fieldtype": "Section Break",
+   "label": "Report Details"
+  },
+  {
+   "fieldname": "template_for_survey_scope",
+   "fieldtype": "Link",
+   "label": "Template For Survey Scope",
+   "options": "Terms and Conditions"
+  },
+  {
+   "fetch_from": "template_for_survey_scope.terms",
+   "fetch_if_empty": 1,
+   "fieldname": "scope_of_survey",
+   "fieldtype": "Text Editor",
+   "label": "Scope of Survey"
+  },
+  {
+   "fieldname": "table_of_content_section",
+   "fieldtype": "Section Break",
+   "label": "Table of Content"
+  },
+  {
+   "fieldname": "template_for_table_of_content",
+   "fieldtype": "Link",
+   "label": "Template for Table of Content",
+   "options": "Terms and Conditions"
+  },
+  {
+   "fetch_from": "template_for_table_of_content.terms",
+   "fetch_if_empty": 1,
+   "fieldname": "table_of_content",
+   "fieldtype": "Text Editor",
+   "label": "Table of Content"
+  },
+  {
+   "fieldname": "executive_summary_section",
+   "fieldtype": "Section Break",
+   "label": "Executive Summary"
+  },
+  {
+   "fieldname": "template_for_executive_summary",
+   "fieldtype": "Link",
+   "label": "Template for Executive Summary",
+   "options": "Terms and Conditions"
+  },
+  {
+   "fetch_from": "template_for_executive_summary.terms",
+   "fetch_if_empty": 1,
+   "fieldname": "executive_summary",
+   "fieldtype": "Text Editor",
+   "label": "Executive Summary"
+  },
+  {
+   "fieldname": "requirement_tab",
+   "fieldtype": "Tab Break",
+   "label": "Requirement"
+  },
+  {
+   "fieldname": "requirements_section",
+   "fieldtype": "Section Break",
+   "label": "Requirements"
+  },
+  {
+   "fieldname": "section_title",
+   "fieldtype": "Data",
+   "label": "Section Title"
+  },
+  {
+   "fieldname": "material",
+   "fieldtype": "Table",
+   "label": "Material",
+   "options": "Materials"
+  },
+  {
+   "fieldname": "requirements_x1_section",
+   "fieldtype": "Section Break",
+   "label": "Requirements x1"
+  },
+  {
+   "fieldname": "section_title_x1",
+   "fieldtype": "Data",
+   "label": "Section Title x1"
+  },
+  {
+   "fieldname": "material_x1",
+   "fieldtype": "Table",
+   "label": "Material x1",
+   "options": "Material Detail"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-03-22 16:07:41.566910",
+ "modified_by": "Administrator",
+ "module": "Estate Management",
+ "name": "Survey Report",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

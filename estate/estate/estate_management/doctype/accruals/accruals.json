@@ -1,0 +1,250 @@
+{
+ "actions": [],
+ "allow_events_in_timeline": 1,
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-07-10 11:09:12.375900",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "reporting_date",
+  "naming_series",
+  "month",
+  "column_break_oxs9",
+  "company",
+  "column_break_okge",
+  "process_accruals",
+  "title",
+  "column_break_ud7q",
+  "accrual_description",
+  "section_break_97ff",
+  "accrued_expense_schedule",
+  "total_section",
+  "column_break_xiqr",
+  "total_accrued_amount",
+  "column_break_9g35",
+  "total_wht",
+  "column_break_bnoz",
+  "total_charged_amount",
+  "amortization_schedule_section",
+  "schedule_of_prepayments",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "reporting_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Reporting Date"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "ACC-EXP-.YY.-"
+  },
+  {
+   "fieldname": "month",
+   "fieldtype": "Data",
+   "label": "Month"
+  },
+  {
+   "fieldname": "column_break_oxs9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "column_break_okge",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "process_accruals",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Process Accruals"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Title"
+  },
+  {
+   "fieldname": "column_break_ud7q",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "accrual_description",
+   "fieldtype": "Small Text",
+   "label": "Accrual Description"
+  },
+  {
+   "fieldname": "section_break_97ff",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "accrued_expense_schedule",
+   "fieldtype": "Table",
+   "label": "Accrued Expense Schedule",
+   "options": "Accrued Expense Schedule"
+  },
+  {
+   "fieldname": "total_section",
+   "fieldtype": "Section Break",
+   "label": "Total"
+  },
+  {
+   "fieldname": "column_break_xiqr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_accrued_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Total Accrued Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_9g35",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_wht",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Total WHT",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_bnoz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_charged_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Total Charged Amount",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "amortization_schedule_section",
+   "fieldtype": "Section Break",
+   "label": "Amortization Schedule"
+  },
+  {
+   "fieldname": "schedule_of_prepayments",
+   "fieldtype": "Table",
+   "label": "Schedule of Prepayments",
+   "options": "Schedule of Prepayments"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Accruals",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-03-22 15:41:57.085007",
+ "modified_by": "Administrator",
+ "module": "Estate Management",
+ "name": "Accruals",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Finance Director",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Finance Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

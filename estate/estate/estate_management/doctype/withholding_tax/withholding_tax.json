@@ -1,0 +1,352 @@
+{
+ "actions": [],
+ "allow_events_in_timeline": 1,
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "color": "Green",
+ "creation": "2025-01-29 19:29:29.570731",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "transaction_detail_section",
+  "naming_series",
+  "party_type",
+  "transaction_date",
+  "title",
+  "column_break_a3gqx",
+  "customer_id",
+  "company",
+  "supplier_id",
+  "column_break_7fq6f",
+  "customer_name",
+  "supplier_name",
+  "currency",
+  "column_break_bxo1t",
+  "exchange_rate",
+  "cost_center",
+  "section_break_r9iee",
+  "gross_amount",
+  "column_break_r1o4",
+  "wht_rate",
+  "column_break_shg1q",
+  "wht_amount",
+  "column_break_yz1kq",
+  "net_amount",
+  "transactions_detail_section",
+  "transaction_purposes",
+  "column_break_e1fvs",
+  "reference_no",
+  "column_break_iyr5",
+  "account",
+  "column_break_wkuqa",
+  "amount_in_words",
+  "signature_section",
+  "column_break_dpr3j",
+  "issued_by",
+  "column_break_vkub",
+  "date",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "transaction_detail_section",
+   "fieldtype": "Section Break",
+   "label": "Transaction Detail"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "WHT-.#####"
+  },
+  {
+   "fieldname": "party_type",
+   "fieldtype": "Select",
+   "label": "Party Type",
+   "options": "\nSupplier\nCustomer\nOthers",
+   "reqd": 1
+  },
+  {
+   "fieldname": "transaction_date",
+   "fieldtype": "Date",
+   "label": "Transaction Date"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Title"
+  },
+  {
+   "fieldname": "column_break_a3gqx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.party_type == 'Customer'",
+   "fieldname": "customer_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Customer ID",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "depends_on": "eval:doc.party_type == 'Supplier'",
+   "fieldname": "supplier_id",
+   "fieldtype": "Link",
+   "label": "Supplier ID",
+   "options": "Supplier"
+  },
+  {
+   "fieldname": "column_break_7fq6f",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.party_type == 'Customer'",
+   "fetch_from": "customer_id.customer_name",
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name",
+   "mandatory_depends_on": "eval:doc.part_typ == 'Customer'"
+  },
+  {
+   "depends_on": "eval:doc.party_type == 'Supplier'",
+   "fetch_from": "supplier_id.supplier_name",
+   "fieldname": "supplier_name",
+   "fieldtype": "Data",
+   "label": "Supplier Name",
+   "mandatory_depends_on": "eval:doc.part_typ == 'Supplier'"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "column_break_bxo1t",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.receipt_currency != 'NGN'",
+   "fieldname": "exchange_rate",
+   "fieldtype": "Float",
+   "label": "Exchange Rate",
+   "mandatory_depends_on": "eval:doc.receipt_currency != 'NGN'",
+   "precision": "2"
+  },
+  {
+   "fieldname": "cost_center",
+   "fieldtype": "Link",
+   "label": "Cost Center",
+   "options": "Cost Center"
+  },
+  {
+   "fieldname": "section_break_r9iee",
+   "fieldtype": "Section Break",
+   "label": "Withholding tax"
+  },
+  {
+   "fieldname": "gross_amount",
+   "fieldtype": "Currency",
+   "label": "Gross Amount"
+  },
+  {
+   "fieldname": "column_break_r1o4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "wht_rate",
+   "fieldtype": "Select",
+   "label": "WHT Rate",
+   "options": "\n5%\n10%"
+  },
+  {
+   "fieldname": "column_break_shg1q",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "wht_amount",
+   "fieldtype": "Currency",
+   "label": "WHT Amount"
+  },
+  {
+   "fieldname": "column_break_yz1kq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "net_amount",
+   "fieldtype": "Currency",
+   "label": "Net Amount"
+  },
+  {
+   "fieldname": "transactions_detail_section",
+   "fieldtype": "Section Break",
+   "label": "Transactions Detail",
+   "mandatory_depends_on": "doc.customer_type"
+  },
+  {
+   "fieldname": "transaction_purposes",
+   "fieldtype": "Small Text",
+   "label": "Transaction Purposes",
+   "max_height": "100px",
+   "width": "100px"
+  },
+  {
+   "fieldname": "column_break_e1fvs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reference_no",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Cheque / Ref No",
+   "length": 8,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_iyr5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:!in_list([\"Receive from Registered\", \"Customer Refund\", \"Receive from One-Off\"], doc.customer_type)\r\n",
+   "description": "Enter Revenue Ac. if transaction is not amortized else enter Deferred Revenue Account\n",
+   "fieldname": "account",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Account Dr. Cr",
+   "mandatory_depends_on": "eval:!in_list([\"Receive from Registered\", \"Customer Refund\", \"Receive from One-Off\"], doc.customer_type)\r\n",
+   "options": "Account",
+   "read_only_depends_on": "eval: doc.customer_type == \"Transfer In\""
+  },
+  {
+   "fieldname": "column_break_wkuqa",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amount_in_words",
+   "fieldtype": "Small Text",
+   "label": "Amount In Words",
+   "max_height": "100px"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "signature_section",
+   "fieldtype": "Section Break",
+   "label": "Signature"
+  },
+  {
+   "fieldname": "column_break_dpr3j",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "issued_by",
+   "fieldtype": "Link",
+   "label": "Issued By",
+   "options": "User"
+  },
+  {
+   "fieldname": "column_break_vkub",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Withholding Tax",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "group": "Payment Entries",
+   "link_doctype": "Payment Entry",
+   "link_fieldname": "party_name"
+  },
+  {
+   "group": "Client",
+   "link_doctype": "Customer",
+   "link_fieldname": "customer_name"
+  }
+ ],
+ "modified": "2025-03-22 16:02:41.760604",
+ "modified_by": "Administrator",
+ "module": "Estate Management",
+ "name": "Withholding Tax",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts User",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "show_name_in_global_search": 1,
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "title",
+ "track_changes": 1
+}
