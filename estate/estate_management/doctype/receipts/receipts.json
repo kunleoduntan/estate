@@ -467,7 +467,8 @@
    "fieldtype": "Column Break"
   },
   {
-   "fetch_from": "remittance_bank.account_currency",
+   "fetch_from": "remittance_bank.custom_bank_currency",
+   "fetch_if_empty": 1,
    "fieldname": "bank_account_currency",
    "fieldtype": "Data",
    "label": "Bank Account Currency",
@@ -527,7 +528,7 @@
    "link_fieldname": "customer_name"
   }
  ],
- "modified": "2025-03-22 15:41:51.733720",
+ "modified": "2025-05-03 17:28:43.673005",
  "modified_by": "Administrator",
  "module": "Estate Management",
  "name": "Receipts",

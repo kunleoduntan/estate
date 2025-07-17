@@ -1,0 +1,125 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-04-29 12:44:14.863687",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_klr1",
+  "party_type",
+  "dynamic_link",
+  "name_of_partner",
+  "column_break_fegf",
+  "start_date",
+  "end_date",
+  "column_break_6cxk",
+  "frequency",
+  "next_renewal_date",
+  "status",
+  "column_break_h6oy",
+  "auto_repeat",
+  "message_section",
+  "message"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_klr1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "next_renewal_date",
+   "fieldtype": "Date",
+   "label": "Next Renewal Date"
+  },
+  {
+   "fieldname": "dynamic_link",
+   "fieldtype": "Data",
+   "label": "Dynamic Link"
+  },
+  {
+   "fieldname": "name_of_partner",
+   "fieldtype": "Data",
+   "label": "Name of Partner"
+  },
+  {
+   "fieldname": "column_break_fegf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "column_break_6cxk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "frequency",
+   "fieldtype": "Data",
+   "label": "Frequency"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nActive\nExpired\nCancelled"
+  },
+  {
+   "fieldname": "auto_repeat",
+   "fieldtype": "Link",
+   "label": "Auto Repeat",
+   "options": "Auto Repeat"
+  },
+  {
+   "fieldname": "message_section",
+   "fieldtype": "Section Break",
+   "label": "Message"
+  },
+  {
+   "fieldname": "message",
+   "fieldtype": "Text Editor",
+   "in_list_view": 1,
+   "label": "Message",
+   "reqd": 1
+  },
+  {
+   "fieldname": "party_type",
+   "fieldtype": "Data",
+   "label": "Party Type"
+  },
+  {
+   "fieldname": "column_break_h6oy",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-04-29 13:17:59.295239",
+ "modified_by": "Administrator",
+ "module": "Estate Management",
+ "name": "Subscription Renewal",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

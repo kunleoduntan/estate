@@ -1,0 +1,119 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-04-23 20:21:18.047387",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_p0mz",
+  "gross_rent_account",
+  "net_rent_account",
+  "deferred_commission_account",
+  "column_break_weaz",
+  "due_to_other_brokers",
+  "admin_fee_account",
+  "column_break_pa2r",
+  "vat_account",
+  "mode_of_recognizing_revenue"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_p0mz",
+   "fieldtype": "Section Break",
+   "label": "Accounts"
+  },
+  {
+   "fieldname": "gross_rent_account",
+   "fieldtype": "Link",
+   "label": "Gross Rent Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "net_rent_account",
+   "fieldtype": "Link",
+   "label": "Net Rent Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "deferred_commission_account",
+   "fieldtype": "Link",
+   "label": "Deferred Commission Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "column_break_weaz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "due_to_other_brokers",
+   "fieldtype": "Link",
+   "label": "Due To Other Brokers",
+   "options": "Account"
+  },
+  {
+   "fieldname": "column_break_pa2r",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "admin_fee_account",
+   "fieldtype": "Link",
+   "label": "Admin Fee Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "vat_account",
+   "fieldtype": "Link",
+   "label": "VAT Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "mode_of_recognizing_revenue",
+   "fieldtype": "Select",
+   "label": "Mode of Recognizing Revenue",
+   "options": "\nOn Schedule\nIn Advance"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2025-04-23 20:31:00.909886",
+ "modified_by": "Administrator",
+ "module": "Estate Management",
+ "name": "Estate Management Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Accounts User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

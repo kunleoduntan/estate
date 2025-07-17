@@ -34,6 +34,14 @@ app_license = "MIT"
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
 
+
+# include js in doctype views
+doctype_js = {"ScanCreate" : "public/js/estate.js"}
+#doctype_js = {"Bank Reconciliation" : "public/js/estate.js"}
+#doctype_list_js = {"Sales Invoice" : "public/js/insurance_list.js"}
+# doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
+# doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
+
 # Home Pages
 # ----------
 
@@ -118,6 +126,29 @@ app_license = "MIT"
 # ---------------
 # Hook on document methods and events
 
+
+
+
+doc_events = {
+    "ScanCreate": {
+        
+        "validate": "estate.tasks.scan_document",
+        
+        #"validate": "estate.tasks.parse_pdf_text",
+        #"validate": "estate.tasks.extract_text_from_pdf",
+        #"validate": "estate.tasks.parse_pdf_text",
+        "validate": "estate.tasks.create_document_from_scan",
+        #"validate": "estate.tasks.extract_text_from_pdf",
+       # "on_submit": "estate.tasks.make_jv",
+        
+    }
+    
+    
+}
+
+
+
+
 # doc_events = {
 #	"*": {
 #		"on_update": "method",
@@ -128,6 +159,16 @@ app_license = "MIT"
 
 # Scheduled Tasks
 # ---------------
+
+scheduler_events = {
+    "cron": {
+        "*/2 * * * *": [
+            "estate.tasks.upload_attendance",
+            "estate.tasks.update_exchange_rates_from_xe"
+        ]
+    }
+}
+
 
 # scheduler_events = {
 #	"all": [

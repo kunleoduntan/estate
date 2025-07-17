@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header, .footer {
+            text-align: center;
+        }
+        .content p {
+            color: black;
+            margin: 0 0 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #00ffff;
+        }
+        .highlight {
+            background-color: #fffacd;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .urgent {
+            color: #ff0000;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Rental Agreement Expiration Notice</h2>
+        </div>
+
+        <div class="content">
+            <p>Dear {% if property_manager_name %}{{ property_manager_name }}{% else %}Property Manager{% endif %},</p>
+
+           <p>This is to notify you that the following rental agreement is approaching its expiration date:</p>
+
+            <table>
+                <tr>
+                    <th>Property Name</th>
+                    <td>{{ property_name }}</td>
+                </tr>
+                <tr>
+                    <th>Property Type</th>
+                    <td>{{ property_type }}</td>
+                </tr>
+                <tr>
+                    <th>Owner</th>
+                    <td>{{ owner_name }}</td>
+                </tr>
+                <tr>
+                    <th>Tenant</th>
+                    <td>{{ tenant_client }}</td>
+                </tr>
+                <tr>
+                    <th>Agreement Number</th>
+                    <td>{{ rental_agreement_no }}</td>
+                </tr>
+                <tr>
+                    <th>Start Date</th>
+                    <td>{{ start_date }}</td>
+                </tr>
+                <tr>
+                    <th>End Date</th>
+                    <td class="urgent">{{ end_date }}</td>
+                </tr>
+                <tr>
+                    <th>Days Remaining</th>
+                    <td class="urgent">{{ days_remaining }} days</td>
+                </tr>
+                <tr>
+                    <th>Base Rent</th>
+                    <td>{{ frappe.format_value(base_rent, {"fieldtype": "Currency"}) }}</td>
+                </tr>
+                <tr>
+                    <th>Rent Frequency</th>
+                    <td>{{ rent_collection_frequency }}</td>
+                </tr>
+                <tr>
+                    <th>Security Deposit</th>
+                    <td>{{ frappe.format_value(security_deposit, {"fieldtype": "Currency"}) }}</td>
+                </tr>
+                <tr>
+                    <th>Property Manager</th>
+                    <td>{{ property_manager_name }}</td>
+                </tr>
+            </table>
+
+            <p><span class="highlight">ACTION REQUIRED:</span> Please review this agreement and take appropriate action before the expiration date.</p>
+
+            <p><b>{{ _("Full details can be found in the ERP system: ") }}</b> {{ frappe.utils.get_link_to_form(doc.doctype, doc.name) }}</p>
+
+            <p>Contact Information:</p>
+            <ul>
+                <li>Owner: {{ property_owner_mobile_phone }} | {{ property_owner_personal_email }}</li>
+                <li>Tenant: {{ mobile_phone }} | {{ personal_email }}</li>
+            </ul>
+
+            <p>Thank you,</p>
+            <p><b>ERPNext Property Management System</b></p>
+        </div>
+
+        <div class="footer">
+            <p>This is an automated notification. Please do not reply to this message.</p>
+        </div>
+    </div>
+</body>
+</html>

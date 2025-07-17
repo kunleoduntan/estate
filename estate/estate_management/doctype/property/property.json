@@ -31,6 +31,16 @@
   "construction_year",
   "column_break_6gsef",
   "condition",
+  "additional_considerations_section",
+  "refundable_deposit",
+  "rent_due_date",
+  "column_break_b63u",
+  "penalty_for_late_payment",
+  "column_break_htn3",
+  "is_pet_allowed",
+  "column_break_xn6l",
+  "is_subletting_allowed",
+  "maintenance_responsibility",
   "amenities_section",
   "amenities",
   "column_break_ms24k",
@@ -76,13 +86,6 @@
   "property_owner_personal_email",
   "column_break_bzhzf",
   "property_owner_official_email",
-  "account_manager_section",
-  "account_manager_mobile_phone",
-  "account_manager_phone_no",
-  "column_break_xuqas",
-  "account_manager_personal_email",
-  "column_break_xtv8r",
-  "account_manager_official_email",
   "client_contact_section",
   "mobile_phone",
   "phone_no",
@@ -90,6 +93,13 @@
   "personal_email",
   "column_break_dbvml",
   "official_email",
+  "account_manager_section",
+  "account_manager_mobile_phone",
+  "account_manager_phone_no",
+  "column_break_xuqas",
+  "account_manager_personal_email",
+  "column_break_xtv8r",
+  "account_manager_official_email",
   "features_tab",
   "copy_from_template",
   "column_break_umj22",
@@ -171,7 +181,7 @@
    "label": "Amenities & Title"
   },
   {
-   "description": "Amenities are additions or extras that enhance the comfort, convenience, or desirability of a property. They describe what a property offers eg. Swimming Pool.\n",
+   "description": "Are things that describe what a property offers eg. Swimming Pool.\n",
    "fieldname": "amenities",
    "fieldtype": "Table",
    "label": "Amenities",
@@ -567,11 +577,61 @@
    "fieldname": "total_other_billable_fees",
    "fieldtype": "Currency",
    "label": "Total Other Billable Fees"
+  },
+  {
+   "fieldname": "additional_considerations_section",
+   "fieldtype": "Section Break",
+   "label": "Additional Considerations"
+  },
+  {
+   "fieldname": "refundable_deposit",
+   "fieldtype": "Currency",
+   "label": "Refundable deposit"
+  },
+  {
+   "fieldname": "rent_due_date",
+   "fieldtype": "Date",
+   "label": "Rent Due Date"
+  },
+  {
+   "fieldname": "column_break_b63u",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "penalty_for_late_payment",
+   "fieldtype": "Currency",
+   "label": "Penalty for Late Payment"
+  },
+  {
+   "fieldname": "column_break_htn3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "is_pet_allowed",
+   "fieldtype": "Select",
+   "label": "Is Pet Allowed",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "column_break_xn6l",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "is_subletting_allowed",
+   "fieldtype": "Select",
+   "label": "Is Subletting Allowed",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "maintenance_responsibility",
+   "fieldtype": "Select",
+   "label": "Maintenance Responsibility",
+   "options": "\nTenant\nLandlord Duties"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-03-28 10:43:58.844190",
+ "modified": "2025-06-03 11:29:35.030690",
  "modified_by": "Administrator",
  "module": "Estate Management",
  "name": "Property",

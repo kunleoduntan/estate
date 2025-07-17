@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header, .footer {
+            text-align: center;
+        }
+        .content p {
+            color: black;
+            margin: 0 0 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50; /* Changed from cyan to green */
+            color: white;
+        }
+        .highlight {
+            background-color: #e8f5e9; /* Light green highlight */
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .action {
+            color: #2E7D32; /* Darker green for action items */
+            font-weight: bold;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 0.8em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2 style="color: #2E7D32;">Rental Agreement Renewal Notice</h2>
+        </div>
+
+        <div class="content">
+            <p>Dear {% if property_manager_name %}{{ property_manager_name }}{% else %}Property Manager{% endif %},</p>
+
+           <p>The following rental agreement is eligible for renewal. Please review the details and initiate the renewal process:</p>
+
+            <table>
+                <tr>
+                    <th>Property Name</th>
+                    <td>{{ property_name }}</td>
+                </tr>
+                <tr>
+                    <th>Property Type</th>
+                    <td>{{ property_type }}</td>
+                </tr>
+                <tr>
+                    <th>Owner</th>
+                    <td>{{ owner_name }}</td>
+                </tr>
+                <tr>
+                    <th>Tenant</th>
+                    <td>{{ tenant_client }}</td>
+                </tr>
+                <tr>
+                    <th>Current Agreement Number</th>
+                    <td>{{ rental_agreement_no }}</td>
+                </tr>
+                <tr>
+                    <th>Current End Date</th>
+                    <td class="action">{{ end_date }}</td>
+                </tr>
+                <tr>
+                    <th>Days Until Expiration</th>
+                    <td class="action">{{ days_remaining }} days</td>
+                </tr>
+                <tr>
+                    <th>Current Base Rent</th>
+                    <td>{{ frappe.format_value(base_rent, {"fieldtype": "Currency"}) }}</td>
+                </tr>
+                <tr>
+                    <th>Rent Frequency</th>
+                    <td>{{ rent_collection_frequency }}</td>
+                </tr>
+                <tr>
+                    <th>Security Deposit</th>
+                    <td>{{ frappe.format_value(security_deposit, {"fieldtype": "Currency"}) }}</td>
+                </tr>
+            </table>
+
+            <p><span class="highlight">RENEWAL OPTIONS:</span> Please consider the following for renewal:</p>
+            <ul>
+                <li>Extend the current terms for another term</li>
+                <li>Adjust rental rate based on market conditions</li>
+                <li>Update any agreement terms as needed</li>
+            </ul>
+
+            <p><b>{{ _("Access the full agreement details here: ") }}</b> {{ frappe.utils.get_link_to_form(doc.doctype, doc.name) }}</p>
+
+            <p>Contact Information for Renewal Discussion:</p>
+            <ul>
+                <li>Property Owner: {{ property_owner_mobile_phone }} | {{ property_owner_personal_email }}</li>
+                <li>Tenant: {{ mobile_phone }} | {{ personal_email }}</li>
+            </ul>
+
+            <p>Please initiate the renewal process at your earliest convenience to ensure continuous tenancy.</p>
+
+            <p>Best regards,</p>
+            <p><b>ERPNext Property Management</b></p>
+        </div>
+
+        <div class="footer">
+            <p>This is an automated notification. For any questions, please contact your system administrator.</p>
+            <p>Generated on: {{ frappe.utils.now_datetime().strftime('%Y-%m-%d') }}</p>
+        </div>
+    </div>
+</body>
+</html>

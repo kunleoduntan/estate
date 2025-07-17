@@ -1,0 +1,61 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-04-28 16:36:05.043839",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_ptce",
+  "leave_type",
+  "column_break_oeml",
+  "days",
+  "column_break_zebj",
+  "gender"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_ptce",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "leave_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Leave Type",
+   "options": "Leave Type"
+  },
+  {
+   "fieldname": "days",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Days"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Gender",
+   "options": "Gender"
+  },
+  {
+   "fieldname": "column_break_oeml",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_zebj",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-04-28 16:40:52.757070",
+ "modified_by": "Administrator",
+ "module": "Estate Management",
+ "name": "Leave Type Detail",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,96 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:company",
+ "creation": "2025-05-03 08:30:05.046827",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "accounts_further_settings_section",
+  "cost_center_distribution",
+  "hr_settings_tab",
+  "hr_further_settings_section",
+  "leave_type_detail"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "unique": 1
+  },
+  {
+   "fieldname": "accounts_further_settings_section",
+   "fieldtype": "Section Break",
+   "label": "Accounts Further Settings"
+  },
+  {
+   "fieldname": "cost_center_distribution",
+   "fieldtype": "Table",
+   "label": "Cost Center Distribution",
+   "options": "Cost Center Distribution"
+  },
+  {
+   "fieldname": "hr_further_settings_section",
+   "fieldtype": "Section Break",
+   "label": "HR Further Settings"
+  },
+  {
+   "fieldname": "leave_type_detail",
+   "fieldtype": "Table",
+   "label": "Leave Type Detail",
+   "options": "Leave Type Detail"
+  },
+  {
+   "fieldname": "hr_settings_tab",
+   "fieldtype": "Tab Break",
+   "label": "HR Settings"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-05-03 08:35:06.689273",
+ "modified_by": "Administrator",
+ "module": "Estate Management",
+ "name": "Custom Settings",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "HR Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "HR User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

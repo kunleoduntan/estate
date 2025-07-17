@@ -42,6 +42,7 @@
   "amortize",
   "is_multi_line",
   "is_shared_cost",
+  "is_related_coy_trans",
   "transactions_detail_section",
   "amount_paid",
   "amount_paid_in_fc",
@@ -71,6 +72,9 @@
   "net_amount",
   "multi_line_transactions_section",
   "payments_item_line",
+  "related_company_transactions_section",
+  "related_company_payments",
+  "total_amount_in_lcy",
   "signature_section",
   "column_break_dpr3j",
   "issued_by",
@@ -196,7 +200,6 @@
    "fieldtype": "Column Break"
   },
   {
-   "fetch_from": "cost_center.region_name",
    "fieldname": "branch",
    "fieldtype": "Data",
    "label": "Region",
@@ -505,6 +508,7 @@
    "label": "Net Amount"
   },
   {
+   "depends_on": "is_multi_line",
    "fieldname": "multi_line_transactions_section",
    "fieldtype": "Section Break",
    "label": "Multi Line Transactions"
@@ -633,7 +637,7 @@
    "label": "Remittance Bank GL"
   },
   {
-   "fetch_from": "remittance_bank.account_currency",
+   "fetch_from": "remittance_bank.custom_bank_currency",
    "fieldname": "bank_account_currency",
    "fieldtype": "Data",
    "label": "Bank Acct Currency",
@@ -700,12 +704,35 @@
    "options": "Payments",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_related_coy_trans",
+   "fieldtype": "Check",
+   "label": "Is Related Coy Trans"
+  },
+  {
+   "depends_on": "is_related_coy_trans",
+   "fieldname": "related_company_transactions_section",
+   "fieldtype": "Section Break",
+   "label": "Related Company Transactions"
+  },
+  {
+   "fieldname": "related_company_payments",
+   "fieldtype": "Table",
+   "label": "Related Company Payments",
+   "options": "Related Company Payments"
+  },
+  {
+   "fieldname": "total_amount_in_lcy",
+   "fieldtype": "Currency",
+   "label": "Total Amount"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-03-22 15:41:50.617939",
+ "modified": "2025-04-04 13:34:43.048327",
  "modified_by": "Administrator",
  "module": "Estate Management",
  "name": "Payments",

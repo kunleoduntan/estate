@@ -122,12 +122,14 @@
   },
   {
    "fetch_from": "bank_account.account",
+   "fetch_if_empty": 1,
    "fieldname": "bank_gl",
    "fieldtype": "Data",
    "label": "Bank GL"
   },
   {
-   "fetch_from": "bank_account.account_currency",
+   "fetch_from": "bank_account.custom_bank_currency",
+   "fetch_if_empty": 1,
    "fieldname": "account_currency",
    "fieldtype": "Data",
    "label": "Account Currency"
@@ -433,7 +435,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-03-22 15:41:48.419750",
+ "modified": "2025-05-03 13:38:14.072604",
  "modified_by": "Administrator",
  "module": "Estate Management",
  "name": "Bank Reconciliation",
